@@ -7,4 +7,5 @@ Course descriptions, prerequisites, cross-listings, transfer options by course, 
 Tentative format: static client-side web-service  
 Languages/Frameworks: HTML/CSS, TypeScript, React, Node (TBD)  
 
-Lead: Trevor Brunette
+Lead: Trevor Brunette  
+Members: Colin Melville
