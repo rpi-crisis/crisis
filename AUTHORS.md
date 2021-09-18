@@ -1,6 +1,12 @@
 ## Founder
 #### [Trevor Brunette](http://www.trevorbru.net/)
 
-## Developers
 
-Colin Melville (Fall 2021 - current)  
+## Co-Founder
+#### Colin Melville
+
+## Developers
+Maryellen Marino (Fall 2021 - current)  
+Pratik Yallapragada (Fall 2021 - current)  
+Emma Clements (Fall 2021 - current)  
+Donna Kim (Fall 2021 - current)
