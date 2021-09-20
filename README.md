@@ -8,12 +8,14 @@ major/dual major curriculum by year, a HASS pathways planner, and possibly even 
 Format: static client-rendered website  
 Stacks: HTML, CSS, TypeScript, React, Node
 
-### Contribution
+
+### Contributors 
 
 Lead: Trevor Brunette  
 Co-Lead: Colin Melville
 
 For more information about contributions, see [AUTHORS](https://github.com/rpi-tools/RTools/blob/main/AUTHORS.md)
+
 
 ### Development 
 We use [node](https://nodejs.org/en/) and [npm](https://www.npmjs.com/) to help develop this project; instructions to install those are 
@@ -27,6 +29,13 @@ To start coding live with auto-compile on save and auto-refresh, within the proj
 To build your code for deployment, within the project directory run  
 `npm run build`  
 and a deployable static site will be built in `working-directory/build/`
+
+
+### Pull Requests  
+
+[WIP]
+
+
 
 ### Licensing
 RTools is licensed under the GNU Affero General Public License v3.0  
