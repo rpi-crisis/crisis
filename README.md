@@ -1,11 +1,11 @@
 # RTools  
 
 RTools is an open source RCOS project: a website that houses various course and major related tools for my college, Rensselaer Polytechnic Institute.  
-From highest priority to lowest this would include:  
+From the highest priority to lowest this would include:  
 Course descriptions, prerequisites, cross-listings, transfer options by course, the course time/location/professor that semester, 
 major/dual major curriculum by year, a HASS pathways planner, and possibly even a course scheduler if one of the RCOS scheduler projects wishes to collaborate.
 
-Format: static client-rendered website  
+Format: static website  
 Stacks: HTML, CSS, TypeScript, React, Node
 
 
