@@ -11,6 +11,7 @@ function App() {
           This is the template for a node-react-ts project. You can edit <code>src/App.tsx</code> and save to reload the page.
           <br/>
           See the installation guide in the repo for information on how to set up the project for development on your system.
+          Help with staging
         </p>
         <a
           className="App-link"
