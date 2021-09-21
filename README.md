@@ -37,7 +37,8 @@ After you have cloned the repository, you will have your own version of it on yo
 You will use a branch for your (team's) development and commits, and submit pull requests to send your cumulative additions from commits for review and then to eventually be merged into the main. 
 Pull requests should be relatively infrequent in general, but since the project is so new, there may be quite a few this semester.   
 
-####Please never force push commits to a PR.
+#### Your commits should be on your development branch, not main.
+#### Please never force push commits to a PR.
 
 
 
