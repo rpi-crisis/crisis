@@ -12,7 +12,7 @@ Stacks: HTML, CSS, TypeScript, React, Node
 ### Contributors
 
 Lead: Trevor Brunette  
-Co-Lead: Colin Melville (this is a thing)
+Co-Lead: Colin Melville (this is a thing I did)
 
 For more information about contributions, see [AUTHORS](https://github.com/rpi-tools/RTools/blob/main/AUTHORS.md)
 
