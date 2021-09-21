@@ -33,7 +33,11 @@ and a deployable static site will be built in `working-directory/build/`
 
 ### Pull Requests  
 
-[WIP]
+After you have cloned the repository, you will have your own version of it on your system to modify. 
+You will use a branch for your (team's) development and commits, and submit pull requests to send your cumulative additions from commits for review and then to eventually be merged into the main. 
+Pull requests should be relatively infrequent in general, but since the project is so new, there may be quite a few this semester.   
+
+####Please never force push commits to a PR.
 
 
 
