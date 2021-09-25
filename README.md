@@ -43,5 +43,5 @@ Pull requests should be relatively infrequent in general, but since the project 
 
 
 ### Licensing
-RTools is licensed under the GNU Affero General Public License v3.0  
+CRISIS is licensed under the GNU Affero General Public License v3.0  
 For more information on licensing and copyright information, see the [LICENSE](https://github.com/rpi-crisis/crisis/blob/main/LICENSE)
