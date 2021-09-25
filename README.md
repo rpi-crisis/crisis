@@ -1,6 +1,6 @@
-# RTools  
+# CRISIS: Correcting RPI's Insufferable SIS  
 
-RTools is an open source RCOS project: a website that houses various course and major related tools for my college, Rensselaer Polytechnic Institute.  
+CRISIS is an open source RCOS project: a website that houses various course and major related tools for my college, Rensselaer Polytechnic Institute, since we believe that the offered tools are insufficient.  
 From the highest priority to lowest this would include:  
 Course descriptions, prerequisites, cross-listings, transfer options by course, the course time/location/professor that semester,
 major/dual major curriculum by year, a HASS pathways planner, and possibly even a course scheduler if one of the RCOS scheduler projects wishes to collaborate.
@@ -12,9 +12,9 @@ Stacks: HTML, CSS, TypeScript, React, Node
 ### Contributors
 
 Lead: Trevor Brunette  
-Co-Lead: Colin Melville (this is a thing I did)
+Co-Lead: Colin Melville
 
-For more information about contributions, see [AUTHORS](https://github.com/rpi-tools/RTools/blob/main/AUTHORS.md)
+For more information about contributions, see [AUTHORS](https://github.com/rpi-crisis/crisis/blob/main/AUTHORS.md)
 
 
 ### Development
@@ -44,4 +44,4 @@ Pull requests should be relatively infrequent in general, but since the project 
 
 ### Licensing
 RTools is licensed under the GNU Affero General Public License v3.0  
-For more information on licensing and copyright information, see the [LICENSE](https://github.com/rpi-tools/RTools/blob/main/LICENSE)
+For more information on licensing and copyright information, see the [LICENSE](https://github.com/rpi-crisis/crisis/blob/main/LICENSE)
