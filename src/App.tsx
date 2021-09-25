@@ -11,7 +11,7 @@ function App() {
         <Search />
         <a
           className="App-link"
-          href="https://github.com/rpi-tools/RTools"
+          href="https://github.com/rpi-crisis/crisis"
           target="_blank"
           rel="noopener noreferrer"
         >
