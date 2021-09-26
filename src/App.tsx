@@ -7,10 +7,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h3>CRISIS - Correcting RPI's Insufferable SIS</h3>
         <p>
-          This is the template for a node-react-ts project. You can edit <code>src/App.tsx</code> and save to reload the page.
-          <br/>
-          See the installation guide in the repo for information on how to set up the project for development on your system.
+          This site is still in development. Check out or contribute to our GitHub to see the progress!
         </p>
         <a
           className="App-link"
