@@ -1,9 +1,12 @@
 import React, { FC } from "react";
+import '../App.css';
 
 const AboutPage: FC = () => {
   return (
-    <div>
-      <p>About page</p>
+    <div className="App">
+      <header className="App-header">
+        <p>About page</p>
+      </header>
     </div>
   );
 }
