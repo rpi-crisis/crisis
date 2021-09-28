@@ -1,6 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import HomePage from './pages/home';
+import AboutPage from './pages/about';
 
 function App() {
   return (
@@ -21,6 +26,16 @@ function App() {
         </a>
       </header>
     </div>
+    <Router>
+      <Switch>
+        <Route path="/rpi-tools/RTools">
+          <HomePage />
+        </Route>
+        <Route path="/rpi-tools/about">
+          <AboutPage />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
