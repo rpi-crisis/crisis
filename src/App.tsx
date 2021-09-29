@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
@@ -14,7 +14,7 @@ function App() {
         <Route exact path="/">
           <HomePage />
         </Route>
-        <Route    path="/home">
+        <Route path="/home">
           <HomePage />
         </Route>
         <Route path="/about">
