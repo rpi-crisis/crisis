@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import {Link} from "react-router-dom";
 import logo from '../logo.svg';
 import '../App.css';
 
@@ -11,6 +12,9 @@ const HomePage: FC = () => {
           <p>
             This site is still in development. Check out or contribute to our GitHub to see the progress!
           </p>
+          <Link className="App-link"
+                  to="/about" >
+            About</Link>
           <a
               className="App-link"
               href="https://github.com/rpi-crisis/crisis"

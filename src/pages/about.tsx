@@ -5,7 +5,9 @@ const AboutPage: FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <p>About page</p>
+        <h3>About page</h3>
+        <p>CRISIS is an open source RCOS project: a website that houses various course and major related tools
+          for my college, Rensselaer Polytechnic Institute, since we believe that the offered tools are insufficient.</p>
       </header>
     </div>
   );
