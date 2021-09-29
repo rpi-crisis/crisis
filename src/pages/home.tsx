@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import {Link} from "react-router-dom";
-import logo from '/src/res/images/logo.svg';
+import logo from '../res/images/logo.svg';
 import '../App.css';
 import './home.css';
 
