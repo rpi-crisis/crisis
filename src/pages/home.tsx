@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 import {Link} from "react-router-dom";
-import logo from '../logo.svg';
+import logo from '/src/res/images/logo.svg';
 import '../App.css';
+import './home.css';
 
 const HomePage: FC = () => {
   return (
@@ -9,12 +10,14 @@ const HomePage: FC = () => {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h3>CRISIS - Correcting RPI's Insufferable SIS</h3>
-          <p>
+          <p className="home-text">
             This site is still in development. Check out or contribute to our GitHub to see the progress!
           </p>
-          <Link className="App-link"
-                  to="/about" >
-            About</Link>
+          <Link
+            className="App-link"
+            to="/about" >
+            About
+          </Link>
           <a
               className="App-link"
               href="https://github.com/rpi-crisis/crisis"
