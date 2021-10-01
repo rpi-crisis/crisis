@@ -12,7 +12,7 @@ const AboutPage: FC = () => {
           for my college, Rensselaer Polytechnic Institute, since we believe that the offered tools are insufficient.</p>
         <Link
           className="App-link"
-          to="/home" >
+          to="/" >
           Home
         </Link>
       </header>
