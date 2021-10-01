@@ -1,24 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import Search from './Search/search'
-import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import HomePage from './pages/home';
+import AboutPage from './pages/about';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Search />
-        <a
-          className="App-link"
-          href="https://github.com/rpi-crisis/crisis"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub Repo
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+        <Route path="/home">
+          <HomePage />
+        </Route>
+        <Route path="/about">
+          <AboutPage />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

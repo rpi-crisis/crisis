@@ -5,8 +5,7 @@ From the highest priority to lowest this would include:
 Course descriptions, prerequisites, cross-listings, transfer options by course, the course time/location/professor that semester,
 major/dual major curriculum by year, a HASS pathways planner, and possibly even a course scheduler if one of the RCOS scheduler projects wishes to collaborate.
 
-Format: static website  
-Stacks: HTML, CSS, TypeScript, React, Node
+Stacks: HTML, CSS, TypeScript, Static React
 
 
 ### Contributors
@@ -37,8 +36,9 @@ After you have cloned the repository, you will have your own version of it on yo
 You will use a branch for your (team's) development and commits, and submit pull requests to send your cumulative additions from commits for review and then to eventually be merged into the main.
 Pull requests should be relatively infrequent in general, but since the project is so new, there may be quite a few this semester.   
 
-#### Your commits should be on your development branch, not main.
-#### Please never force push commits to a PR.
+#### Fetch before committing and pull from main before PRing 
+#### Your commits should be on your (group's) development branch.
+#### Never force push.
 
 
 
