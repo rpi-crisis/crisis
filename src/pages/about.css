@@ -1,3 +1,4 @@
 .about-text{
     max-width: 960px;
+    color: var(--text-color)
 }
