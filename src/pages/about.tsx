@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import {Link} from "react-router-dom";
 import './about.css';
 import NavBar from "../navbar/navbar";
 
