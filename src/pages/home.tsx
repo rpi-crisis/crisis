@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import logo from '../res/images/logo.svg';
+import logo from '../res/images/kool-aid_cat.png';
 import './home.css';
 
 import NavBar from '../navbar/navbar';
