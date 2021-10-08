@@ -11,20 +11,16 @@ type page = {
 
 const NavBar: FC<{pages:page[]}> = ({pages}) => {
 
-  return (
-    <div className="bar">
-    {pages.map(el => {
-      let text = (
-        <div className="link-text">
-          {el.text}
-        </div>
-      )
-      return (
-        <div className="link-box"
-          style={el.active?
-            {background :"var(--text-color)",color:"var(--bg-color)"}:
-            {background :"var(--nav-color)",color:"var(--text-color)"}
-        }>
+  let text: JSX.Element[] = pages.map(el => (
+      <div className='link-text'>
+        {el.text}
+      </div>
+    )
+  )
+
+  let boxes: JSX.Element[] = pages.map((el,pos) => {
+      if(el.external) {
+        return (
           <a
             className="link"
             href={el.external}
@@ -32,16 +28,32 @@ const NavBar: FC<{pages:page[]}> = ({pages}) => {
             rel="noopener noreferrer"
             style={el.external===undefined?{display:"None"}:{}}
           >
-            {text}
+            {text[pos]}
           </a>
-          <Link
-            to={el.path} className="link"
-            style={el.external===undefined?{}:{display:"None"}}
-          >
-            {text}
-          </Link>
+        )
+      }
+      return (
+        <Link
+          to={el.path} className="link"
+          style={el.external===undefined?{}:{display:"None"}}
+        >
+          {text[pos]}
+        </Link>
+      )
+    }
+  )
+
+  return (
+    <div className="bar">
+      {pages.map((el,pos) => (
+        <div className="link-box"
+          style={el.active?
+            {background :"var(--text-color)",color:"var(--bg-color)"}:
+            {background :"var(--nav-color)",color:"var(--text-color)"}
+        }>
+          {boxes[pos]}
         </div>
-    )})}
+      ))}
     </div>
   );
 }
