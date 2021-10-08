@@ -9,12 +9,15 @@
   flex-direction: row;
   justify-content: center;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   top: 0;
 }
 
+.link-text{
+  padding: 5px 40px 10px 40px;
+}
+
 .bar>.link-box{
-  width: 10vw;
   margin-left: 1vw;
   margin-right: 1vw;
   border-bottom-left-radius: 10px;
@@ -29,6 +32,5 @@
 
 .link {
   color: inherit;
-  min-width: 10vw;
   text-decoration: none;
 }
