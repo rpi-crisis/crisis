@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import HomePage from './pages/home';
 import AboutPage from './pages/about';
+import SearchPage from './pages/list-search';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
         </Route>
         <Route path="/about">
           <AboutPage />
+        </Route>
+        <Route path="/search">
+          <SearchPage />
         </Route>
       </Switch>
     </Router>
