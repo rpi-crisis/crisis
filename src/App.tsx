@@ -7,6 +7,7 @@ import {
 import HomePage from './pages/home';
 import AboutPage from './pages/about';
 import SearchPage from './pages/list-search';
+import TestInput from "./pages/TestInput";
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route path="/search">
           <SearchPage />
+        </Route>
+        <Route path="/input">
+          <TestInput />
         </Route>
       </Switch>
     </Router>

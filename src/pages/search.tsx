@@ -1,4 +1,4 @@
-import React, {ChangeEventHandler, FC, FormEvent, useState} from "react";
+import React, {FC, FormEvent, useState} from "react";
 import '../App.css';
 import {info_type} from './list-search'
 
