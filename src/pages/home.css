@@ -1,7 +1,8 @@
 @import "../theme.css";
 
 .App-logo {
-  height: 40vmin;
+  height: 20vmin;
+  margin-top: clamp(10px, 15vmin, 200px);
   pointer-events: none;
 }
 
@@ -21,7 +22,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: var(--header-color);
 }
