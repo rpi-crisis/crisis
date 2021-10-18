@@ -24,7 +24,7 @@ const AboutPage: FC = () => {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <header className="info-header">
         <NavBar pages={pages} />
         <h3>About page</h3>
         <p className="about-text">CRISIS is an open source RCOS project: a website that houses various course and major related tools
