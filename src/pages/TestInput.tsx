@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React, {useState, FC} from "react";
 import '../App.css';
 import InputComponent from "./input-component";
 
-const TestInput = () => {
+const TestInput : FC = () => {
   let [t1, f1] = useState<string>("");
   let [t2, f2] = useState<string>("");
   let [t3, f3] = useState<string>("");

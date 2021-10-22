@@ -8,6 +8,7 @@ import HomePage from './pages/home';
 import AboutPage from './pages/about';
 import SearchPage from './pages/list-search';
 import TestInput from "./pages/TestInput";
+import DesignTest from "./pages/DesignTest";
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path="/input">
           <TestInput />
+        </Route>
+        <Route path="/design">
+          <DesignTest />
         </Route>
       </Switch>
     </Router>
