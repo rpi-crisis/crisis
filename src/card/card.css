@@ -6,6 +6,20 @@
   margin-top: 2rem;
   background: var(--bg-color);
   border-radius: 2rem;
-  box-shadow: inset 0 0 0 0.2em var(--text-color),
-              0 0 0 0.1em var(--accent-color);
+  border: solid;
+  border-color: var(--highlight-color);
+}
+
+.head {
+  color: var(--header-color);
+}
+.content{
+  margin-top: 1rem;
+  font-size: 0.8em;
+  color: var(--text-color);
+}
+
+.card:hover {
+  box-shadow: 0 0 0 .2em var(--highlight-color);
+  transition: 0.2s;
 }
