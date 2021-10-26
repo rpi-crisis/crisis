@@ -1,34 +1,34 @@
 .design-header {
-    background-color: #afafaf;
+    background-color: #886BED;
     min-height: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(14px + 2vmin);
-    color: black;
+    color: #F8F8F7;
 }
 
 .design-footer {
-    background-color: #dfdfdf;
+    background-color: #725C90;
     min-height: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 1vmin);
-    color: black;
+    color: #F8F8F7;
 }
 
 .design-content {
-    background-color: #cfcfcf;
+    background-color: #261D31;
     min-height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: black;
+    color: #F8F8F7;
 }
 
 .App-link {

@@ -5,7 +5,7 @@ const DesignTest : FC = () => {
   return(
     <div className="design">
       <header className="design-header">
-        I am a header
+        Home  |  About  |  GitHub
       </header>
 
       <div className="design-content">
@@ -13,7 +13,7 @@ const DesignTest : FC = () => {
       </div>
 
       <footer className="design-footer">
-        I am a footer
+        CRISIS - Correcting Rensselaer's Insufferable SIS
       </footer>
     </div>
     );
