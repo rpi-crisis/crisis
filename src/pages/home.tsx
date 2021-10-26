@@ -4,6 +4,7 @@ import './home.css';
 
 import NavBar from '../navbar/navbar';
 import SearchBar from '../search/search';
+import Card from '../card/card';
 
 const HomePage: FC = () => {
 
@@ -33,9 +34,11 @@ const HomePage: FC = () => {
           <img src={logo} className="App-logo" alt="logo" />
           <h3>CRISIS - Correcting RPI's Insufferable SIS</h3>
           <SearchBar />
-          <p className="home-text">
-            This site is still in development. Check out or contribute to our GitHub to see the progress!
-          </p>
+          <div className='card-container'>
+            <Card head='Classes'/>
+            <Card head='Transfers'/>
+            <Card head='Degrees'/>
+          </div>
         </header>
       </div>
   )
