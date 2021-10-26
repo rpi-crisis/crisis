@@ -35,9 +35,9 @@ const HomePage: FC = () => {
           <h3>CRISIS - Correcting RPI's Insufferable SIS</h3>
           <SearchBar />
           <div className='card-container'>
-            <Card head='Classes'/>
-            <Card head='Transfers'/>
-            <Card head='Degrees'/>
+            <Card head='Classes' content='Lorem Ipsum' key='1'/>
+            <Card head='Transfers' content='Lorem Ipsum' key='2'/>
+            <Card head='Degrees' content='Lorem Ipsum' key='3'/>
           </div>
         </header>
       </div>
