@@ -8,7 +8,7 @@ import HomePage from './pages/home';
 import AboutPage from './pages/about';
 import SearchPage from './pages/list-search';
 import TestInput from "./pages/TestInput";
-import DesignTest from "./pages/DesignTest";
+import DesignTest from "./pages/design-test";
 import init from "./scripts/data"
 
 function App() {
@@ -17,9 +17,6 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/">
-          <HomePage />
-        </Route>
-        <Route path="/home">
           <HomePage />
         </Route>
         <Route path="/about">

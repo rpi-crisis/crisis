@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import '../App.css';
-import Search from "./search";
+import Search from "../components/search";
 
 const ListPage = () => {
 

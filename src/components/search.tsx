@@ -1,6 +1,6 @@
 import React, {FC, FormEvent, useState} from "react";
 import '../App.css';
-import {info_type} from './list-search'
+import {info_type} from '../pages/list-search'
 
 const Search: FC<{data:info_type[],update:(data:info_type) => void}> = ({data,update}) => {
   let [add_field, add_update] = useState<string>("");

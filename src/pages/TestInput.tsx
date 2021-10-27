@@ -1,6 +1,6 @@
 import React, {useState, FC} from "react";
 import '../App.css';
-import InputComponent from "./input-component";
+import InputComponent from "../components/input-component";
 
 const TestInput : FC = () => {
   let [t1, f1] = useState<string>("");
