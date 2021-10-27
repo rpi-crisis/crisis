@@ -3,6 +3,8 @@
  * Otherwise, load the locally cached data.
  */
 
+import * as localforage from "localforage";
+
 const filepath:string = "https://raw.githubusercontent.com/rpi-crisis/data/main/";
 const courses_name:string = "courses.json";
 const version_name:string = "meta";
@@ -14,8 +16,13 @@ let is_init:boolean = false;
 function init(){
   if(!is_init) {
     is_init = true;
-    local_version = localStorage.getItem("courses_version") as string;
-    fetchVersion();
+    localforage.getItem("data_version")
+      .then((data_version_value)=>{
+        local_version = data_version_value as string;
+        fetchVersion();
+    })
+    //local_version = localStorage.getItem("data_version") as string;
+    //fetchVersion();
   }
 }
 
@@ -45,8 +52,8 @@ function fetchData() {
   fetch(filepath + courses_name)
     .then(response => response.json())
     .then(data => {
-      localStorage.setItem("courses_json", JSON.stringify(data));
-      localStorage.setItem("courses_version", db_version);
+      localforage.setItem("courses_json", JSON.stringify(data));
+      localforage.setItem("data_version", db_version);
       // Debug logging
       console.log("courses.json fetched");
       console.log(data);

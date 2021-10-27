@@ -7,9 +7,9 @@ import {
 import HomePage from './pages/home';
 import AboutPage from './pages/about';
 import SearchPage from './pages/list-search';
-import TestInput from "./pages/TestInput";
+import TestInput from "./pages/test-input";
 import DesignTest from "./pages/design-test";
-import init from "./scripts/data"
+import init from "./scripts/data-fetch"
 
 function App() {
   init();

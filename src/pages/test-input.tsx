@@ -6,6 +6,9 @@ const TestInput : FC = () => {
   let [t1, f1] = useState<string>("");
   let [t2, f2] = useState<string>("");
   let [t3, f3] = useState<string>("");
+  console.log(t1)
+  console.log(t2)
+  console.log(t3)
 
   return(
 
