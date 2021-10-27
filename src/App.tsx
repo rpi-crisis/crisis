@@ -9,8 +9,10 @@ import AboutPage from './pages/about';
 import SearchPage from './pages/list-search';
 import TestInput from "./pages/TestInput";
 import DesignTest from "./pages/DesignTest";
+import init from "./scripts/data"
 
 function App() {
+  init();
   return (
     <Router>
       <Switch>
