@@ -5,9 +5,10 @@
   height: 10rem;
   margin-top: 2rem;
   background: var(--bg-color);
-  border-radius: 2rem;
+  border-radius: 0.7rem;
   border: solid;
   border-color: var(--highlight-color);
+  transition: 0.5s;
 }
 
 .head {
@@ -20,6 +21,8 @@
 }
 
 .card:hover {
-  box-shadow: 0 0 0 .2em var(--highlight-color);
+  box-shadow: 0 0 0 .2em var(--accent-color);
+  border-color: var(--accent-color);
+  z-index: 1;
   transition: 0.2s;
 }
