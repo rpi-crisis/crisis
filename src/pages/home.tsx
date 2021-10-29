@@ -1,8 +1,10 @@
 import React, { FC } from "react";
-import {Link} from "react-router-dom";
+import {A, navigate} from "hookrouter";
 import logo from '../res/images/logo.svg';
 import '../App.css';
 import './home.css';
+
+
 
 const HomePage: FC = () => {
   return (
@@ -13,11 +15,11 @@ const HomePage: FC = () => {
           <p className="home-text">
             This site is still in development. Check out or contribute to our GitHub to see the progress!
           </p>
-          <Link
+          <A
             className="App-link"
-            to="/about" >
+            href="/about">
             About
-          </Link>
+          </A>
           <a
               className="App-link"
               href="https://github.com/rpi-crisis/crisis"
