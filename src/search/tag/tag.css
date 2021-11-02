@@ -1,0 +1,50 @@
+@import '../../theme.css';
+
+.tag {
+  background: var(--highlight-color);
+  color: var(--bg-color);
+  font-size: 0.7em;
+  padding: 0.2em 0.4em;
+  padding-left: 0.7em;
+  transition: 0.4s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  clip-path: polygon(
+    0% 50%,
+    1em 0%,
+    calc(100% - 1em) 0%,
+    100% 50%,
+    100% 50%,
+    calc(100% - 1em) 100%,
+    1em 100%
+  );
+  overflow:hidden;
+}
+
+.tag:hover {
+  background: var(--accent-color);
+  transition: 0.2s;
+}
+
+.remove {
+  display: inline-flex;
+  width: 1em;
+  height: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+#l,#r {
+  position: absolute;
+  width: 0.5em;
+  height: 0.15em;
+  border-radius: 0.2em;
+  background: var(--bg-color);
+}
+#l {
+  transform: rotate(45deg);
+}
+#r {
+  transform: rotate(-45deg);
+}
