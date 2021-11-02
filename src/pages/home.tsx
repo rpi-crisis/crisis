@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import {A, navigate} from "hookrouter";
+import {A} from "hookrouter";
 import logo from '../res/images/logo.svg';
 import '../App.css';
 import './home.css';

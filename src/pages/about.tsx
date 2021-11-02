@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import {Link} from "react-router-dom";
 import {A} from "hookrouter";
 import '../App.css';
 import './about.css';
