@@ -3,9 +3,6 @@ import "./search.css"
 import Tag from "./tag/tag";
 const SearchBar: FC<{content_update:(content:string)=>void, searchFunc:()=>void, tags:string[], tag_update:(tags:string[])=>void}> = ({content_update,searchFunc,tags,tag_update}) => {
 
-
-  let tag_strings:string[] = ["hello","how","you"];
-
   const remove_tag = (name:string):void => {
     let temp:string[] = [...tags].filter(el => el !==name);
     tag_update(temp);
