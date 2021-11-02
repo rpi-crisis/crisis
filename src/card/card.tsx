@@ -1,4 +1,4 @@
-import React, { FC, useRef } from "react";
+import React, { FC } from "react";
 import './card.css';
 
 const Card: FC<{head:string, content:string}> = ({head,content}) => {
