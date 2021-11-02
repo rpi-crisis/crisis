@@ -19,17 +19,16 @@
     }
   ],
   "dependencies": {
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^11.2.7",
-    "@testing-library/user-event": "^12.8.3",
-    "@types/jest": "^26.0.24",
+    "@types/hookrouter": "^2.2.5",
     "@types/node": "^12.20.25",
     "@types/react": "^17.0.21",
     "@types/react-dom": "^17.0.9",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "hookrouter": "^1.2.5",
+    "localforage": "^1.10.0",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-router-dom": "^5.3.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^4.0.3",
     "typescript": "^4.4.3",
     "web-vitals": "^1.1.2"
   },
@@ -37,7 +36,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build && echo '/* /index.html 200' > build/_redirects",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cleanup-hookrouter-types": "rm -f node_modules/hookrouter/dist/index.d.ts* # See https://github.com/Paratron/hookrouter/issues/147",
+    "postinstall": "npm run cleanup-hookrouter-types"
   },
   "eslintConfig": {
     "extends": [

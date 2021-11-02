@@ -1,27 +1,24 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import {useRoutes} from 'hookrouter';
 import HomePage from './pages/home';
 import AboutPage from './pages/about';
+// TODO when complete, uncomment // import init from "./scripts/data-fetch"
+
+const routes = {
+  '/': () => <HomePage />,
+  '/about': () => <AboutPage />,
+};
 
 function App() {
+  // TODO when complete, uncomment // init();
+
+  const routeResult = useRoutes(routes);
+
+  // replace "<div>Error 404: Page Not Found</div>" with a 404 page.
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <HomePage />
-        </Route>
-        <Route path="/home">
-          <HomePage />
-        </Route>
-        <Route path="/about">
-          <AboutPage />
-        </Route>
-      </Switch>
-    </Router>
+    <div>
+      <div>{routeResult || <div>Error 404: Page Not Found</div>}</div>
+    </div>
   );
 }
 
