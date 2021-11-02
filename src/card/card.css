@@ -25,4 +25,5 @@
   border-color: var(--accent-color);
   z-index: 1;
   transition: 0.2s;
+  transform: scale(1.1);
 }

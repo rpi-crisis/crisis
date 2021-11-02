@@ -33,10 +33,11 @@
 
 .tagbox {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.3em;
   margin-top: 0.2em;
   flex-wrap: wrap;
+  flex-grow: 2;
   width: clamp(50vmin,75vmin, 40ch);
 }
 
