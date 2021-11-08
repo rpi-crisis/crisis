@@ -1,6 +1,6 @@
 {
   "name": "crisis",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "AGPL-3.0",
   "private": false,
   "homepage": "https://rpicrisis.org/",
@@ -19,26 +19,25 @@
     }
   ],
   "dependencies": {
-    "@types/hookrouter": "^2.2.5",
     "@types/node": "^12.20.25",
-    "@types/react": "^17.0.21",
-    "@types/react-dom": "^17.0.9",
-    "hookrouter": "^1.2.5",
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
+    "bootstrap": "^5.1.3",
+    "bootstrap-icons": "^1.7.0",
+    "fuse.js": "^6.4.6",
     "localforage": "^1.10.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-router-dom": "^5.3.0",
     "react-scripts": "^4.0.3",
-    "typescript": "^4.4.3",
+    "typescript": "^4.4.4",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build && echo '/* /index.html 200' > build/_redirects",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "cleanup-hookrouter-types": "rm -f node_modules/hookrouter/dist/index.d.ts* # See https://github.com/Paratron/hookrouter/issues/147",
-    "postinstall": "npm run cleanup-hookrouter-types"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
