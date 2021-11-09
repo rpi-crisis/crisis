@@ -1,12 +1,12 @@
 import React, { FC, useState } from "react";
-import logo from '../res/images/kool-aid_cat.png';
+import logo from '../../res/images/kool-aid_cat.png';
 import './home.css';
 
-import NavBar from '../navbar/navbar';
-import SearchBar from '../search/search';
-import Card from '../card/card';
+import NavBar from '../../navbar/navbar';
+import SearchBar from '../../search/search';
+import Card from '../../card/card';
 
-import Pages from './pageList'
+import Pages from '../pageList'
 
 const HomePage: FC = () => {
 

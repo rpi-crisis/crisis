@@ -1,4 +1,4 @@
-@import "../theme.css";
+@import "../../theme.css";
 
 .info-header {
   background-color: var(--bg-color);
