@@ -1,5 +1,5 @@
 import React, {FC, FormEvent, useState} from "react";
-import '../App.css';
+import '../theme.css';
 import {info_type} from '../pages/list-search'
 
 const Search: FC<{data:info_type[],update:(data:info_type) => void}> = ({data,update}) => {
@@ -24,7 +24,7 @@ const Search: FC<{data:info_type[],update:(data:info_type) => void}> = ({data,up
         onChange={handleAdd}
       />
       <button type="submit" onClick={() => {handleItemUpdate({id:data.length+1,text:add_field})}}>Add</button>
-      <form action="/search" method="get">
+      <form action="/" method="get">
         <input
           type="text"
           id="header-search"

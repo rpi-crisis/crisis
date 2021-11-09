@@ -1,19 +1,16 @@
 import React, {Dispatch, FC, FormEvent, SetStateAction} from "react";
 
-const InputComponent : FC<{id?:string, placeholder?:string, setOutside: Dispatch<SetStateAction<string>>}> = ({id, placeholder, setOutside}) => {
+type onInputFunction = (arg:string) => void;
+const InputComponent : FC<{id:string, placeholder:string, setOutside: Dispatch<SetStateAction<string>>, runOnInput:onInputFunction}> = ({id, placeholder, setOutside, runOnInput}) => {
 
-  if(placeholder === undefined){
-    placeholder = "";
-  }
-
-  if(id === undefined){
-    id = "";
-  }
+  if(!placeholder) placeholder = "";
+  if(!id) id = "";
 
   const onInput: React.FormEventHandler<HTMLInputElement> = (event: FormEvent<HTMLInputElement>) => {
-    setOutside(event.currentTarget.value as string);
-
-    console.log(event.currentTarget.value as string);
+    let trimmed = event.currentTarget.value.trim() as string;
+    setOutside(trimmed);
+    runOnInput(trimmed);
+    console.log(trimmed);
   }
 
   return(
