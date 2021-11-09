@@ -25,10 +25,4 @@ function search(query: string, json:any, keys:string[]): any[] {
 
 }
 
-async function fast_search(query: string, json:any, keys:string[]): Promise<any[]> {
-  if (!json) return Promise.resolve([]);
-
-  return Promise.resolve([]);
-}
-
-export { search, fast_search };
+export { search };
