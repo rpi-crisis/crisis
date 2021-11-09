@@ -1,24 +1,26 @@
-import React from 'react';
-import {useRoutes} from 'hookrouter';
+import React, { useState } from 'react';
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import HomePage from './pages/home';
 import AboutPage from './pages/about';
-// TODO when complete, uncomment // import init from "./scripts/data-fetch"
-
-const routes = {
-  '/': () => <HomePage />,
-  '/about': () => <AboutPage />,
-};
+import TestInput from "./pages/test-input";
+import init, { getJsonData } from "./scripts/data-fetch"
 
 function App() {
-  // TODO when complete, uncomment // init();
+  init();
+  const [courses_json, updateData] = useState([]);
+  getJsonData().then((res) => {
+    updateData(res);
+  })
 
-  const routeResult = useRoutes(routes);
-
-  // replace "<div>Error 404: Page Not Found</div>" with a 404 page.
   return (
-    <div>
-      <div>{routeResult || <div>Error 404: Page Not Found</div>}</div>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact={true} path="/" component={HomePage} />
+        <Route path="/about" component={AboutPage} />
+        <Route path="/search" component={TestInput} />
+        <Route render={() => <h1>Error 404: Page not found</h1>} />
+      </Switch>
+    </Router>
   );
 }
 

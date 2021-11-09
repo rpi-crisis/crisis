@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import {A} from "hookrouter";
+import { Link } from "react-router-dom"
 import "./navbar.css"
 
 type page = {
@@ -34,12 +34,12 @@ const NavBar: FC<{pages:page[]}> = ({pages}) => {
           >
             {text}
           </a>
-          <A
-            href={el.path} className="link"
+          <Link
+            to={el.path} className="link"
             style={el.external===undefined?{}:{display:"None"}}
           >
             {text}
-          </A>
+          </Link>
         </div>
     )})}
     </div>
