@@ -2,9 +2,9 @@ import React, { FC, useState } from "react";
 import logo from '../../res/images/kool-aid_cat.png';
 import './home.css';
 
-import NavBar from '../../navbar/navbar';
-import SearchBar from '../../search/search';
-import Card from '../../card/card';
+import NavBar from '../../components/navbar/navbar';
+import SearchBar from '../../components/search/search';
+import Card from '../../components/card/card';
 
 import Pages from '../pageList'
 
@@ -12,7 +12,7 @@ const HomePage: FC = () => {
 
 
   let [searchbar_content, content_update] = useState("");
-  let [search_tags, update_tags] = useState([""]);
+  let [search_tags, update_tags] = useState<string[]>([]);
 
   const search_function:()=>void = () => {
     alert(searchbar_content);

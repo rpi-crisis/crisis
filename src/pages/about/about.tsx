@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import './about.css';
-import NavBar from "../../navbar/navbar";
+import NavBar from "../../components/navbar/navbar";
 
 import Pages from "../pageList";
 
