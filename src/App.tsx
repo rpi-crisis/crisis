@@ -1,16 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import HomePage from './pages/home';
 import AboutPage from './pages/about';
 import TestInput from "./pages/test-input";
-import init, { getJsonData } from "./scripts/data-fetch"
+import init from "./scripts/data-fetch"
 
 function App() {
   init();
-  const [courses_json, updateData] = useState([]);
-  getJsonData().then((res) => {
-    updateData(res);
-  })
 
   return (
     <Router>
