@@ -1,0 +1,44 @@
+[
+  {
+    "title": "AAAA 1000",
+    "department": "AAAA",
+    "id_num": 1000,
+    "credits": 4,
+    "ci": false,
+    "description": "This is a sample class",
+    "prereq": ["ABCD 1000"],
+    "coreq": ["BCDE 1000"],
+    "cross": ["CDEF 1000"],
+    "sections": [
+      {
+        "crn": "00000",
+        "section": "00",
+        "capacity": 100,
+        "enrolled": 0,
+        "remaining": 100,
+        "meetings": [
+          {
+            "time": "10:00 am",
+            "days": "MR",
+            "location": "Russell Sage Laboratory 0000",
+            "type": "Lecture",
+            "instructors": "John Smith, Jon Doe"
+          }
+        ]
+      }
+    ],
+    "required-by": {
+      "major": ["ABCD"],
+      "minor": ["BCDE"],
+      "hass": ["The Pathway"]
+    },
+    "transfer": [
+      {
+        "school": "Some School University",
+        "location": "New York",
+        "title": "CALCULUS I",
+        "id": "M 117"
+      }
+    ]
+  }
+]
