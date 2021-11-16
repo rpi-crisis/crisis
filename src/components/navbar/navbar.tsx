@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import {A} from "hookrouter";
+import { Link } from "react-router-dom";
 import "./navbar.css"
 
 type page = {

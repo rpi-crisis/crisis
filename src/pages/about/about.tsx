@@ -17,4 +17,4 @@ const AboutPage: FC = () => {
     </div>
   );
 }
-
+export default AboutPage;
