@@ -75,6 +75,7 @@ function fetchData(): void {
     });
 }
 
+// Do not use inside a component which is re-rendered often.
 async function getJsonData(): Promise<any> {
   return JSON.parse(await localforage.getItem("courses_json") as string);
 }
