@@ -1,4 +1,4 @@
-@import "../theme.css";
+@import "../../theme.css";
 
 .bar {
   transition: 0.2s;
@@ -9,26 +9,31 @@
   flex-direction: row;
   justify-content: center;
   width: 100vw;
-  position: absolute;
+  position: fixed;
   top: 0;
+  z-index: 1;
+}
+
+.link-text{
+  padding: 5px 40px 10px 40px;
 }
 
 .bar>.link-box{
-  width: 10vw;
   margin-left: 1vw;
   margin-right: 1vw;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  transition: 0.5s;
 }
 
 .bar>.link-box:hover {
   transition: 0.3s;
   color: var(--bg-color) !important;
   background: var(--highlight-color) !important;
+  transform: scale(1.1);
 }
 
 .link {
   color: inherit;
-  min-width: 10vw;
   text-decoration: none;
 }

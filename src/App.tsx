@@ -1,13 +1,11 @@
 import React from 'react';
-import {useRoutes} from 'hookrouter';
-import HomePage from './pages/home';
-import AboutPage from './pages/about';
-// TODO when complete, uncomment // import init from "./scripts/data-fetch"
-
-const routes = {
-  '/': () => <HomePage />,
-  '/about': () => <AboutPage />,
-};
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import HomePage from './pages/home/home';
+import AboutPage from './pages/about/about';
 
 function App() {
   // TODO when complete, uncomment // init();
@@ -22,4 +20,3 @@ function App() {
   );
 }
 
-export default App;

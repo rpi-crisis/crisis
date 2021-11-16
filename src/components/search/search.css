@@ -1,0 +1,75 @@
+@import "../../theme.css";
+
+.searchbar {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 0.75em;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+
+.search {
+  width: 1.5em;
+  height: 1.5em;
+  background: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.search:hover {
+  background: var(--accent-color);
+  transition: 0.2s;
+}
+
+.textbox {
+  align-items: center;
+  display: flex;
+}
+
+.tagbox {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.3em;
+  margin-top: 0.2em;
+  flex-wrap: wrap;
+  flex-grow: 2;
+  width: clamp(50vmin,75vmin, 40ch);
+}
+
+
+#circ {
+  position: absolute;
+  transform: translate(-0.1em);
+  width: 0.5em;
+  height: 0.5em;
+  background: inherit;
+  border-radius:  0.5em;
+  box-shadow: 0 0 0 0.125em var(--bg-color);
+}
+
+#hand {
+  position: absolute;
+  border-radius: 0.5em;
+  transform: translate(-0.1em) rotate(45deg) translate(0.35em);
+  width: 0.5em;
+  height: 0.2em;
+  background: var(--bg-color);
+}
+
+ input {
+   height: 1.3em;
+   width: clamp(50vmin,75vmin, 40ch);
+   font-size: inherit;
+   background: var(--nav-color);
+   border-color: var(--nav-color);
+   border-style: solid;
+   border-top-left-radius: 0.75em;
+   border-bottom-left-radius: 0.75em;
+   color: var(--text-color);
+   text-align: center;
+ }
