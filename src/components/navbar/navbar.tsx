@@ -27,6 +27,7 @@ const NavBar: FC<{pages:page[]}> = ({pages}) => {
             target="_blank"
             rel="noopener noreferrer"
             style={el.external===undefined?{display:"None"}:{}}
+	    key={pos}
           >
             {text[pos]}
           </a>
@@ -36,6 +37,7 @@ const NavBar: FC<{pages:page[]}> = ({pages}) => {
         <Link
           to={el.path} className="link"
           style={el.external===undefined?{}:{display:"None"}}
+	  key={pos}
         >
           {text[pos]}
         </Link>
@@ -50,7 +52,9 @@ const NavBar: FC<{pages:page[]}> = ({pages}) => {
           style={el.active?
             {background :"var(--text-color)",color:"var(--bg-color)"}:
             {background :"var(--nav-color)",color:"var(--text-color)"}
-        }>
+	  }
+	  key={pos}
+	>
           {boxes[pos]}
         </div>
       ))}

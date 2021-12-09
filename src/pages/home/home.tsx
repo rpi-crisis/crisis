@@ -4,7 +4,6 @@ import './home.css';
 
 import NavBar from '../../components/navbar/navbar';
 import SearchBar from '../../components/search/search';
-import Card from '../../components/card/card';
 
 import Pages from '../pageList'
 
@@ -25,11 +24,6 @@ const HomePage: FC = () => {
           <img src={logo} className="App-logo" alt="logo" />
           <h3>CRISIS - Correcting RPI's Insufferable SIS</h3>
           <SearchBar content_update={content_update} searchFunc={search_function} tags={search_tags} tag_update={update_tags}/>
-          <div className='card-container'>
-            <Card head='Classes' content='Lorem Ipsum' key='1'/>
-            <Card head='Transfers' content='Lorem Ipsum' key='2'/>
-            <Card head='Degrees' content='Lorem Ipsum' key='3'/>
-          </div>
         </header>
       </div>
   )
