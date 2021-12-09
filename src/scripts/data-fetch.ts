@@ -6,7 +6,7 @@
 import * as localforage from "localforage";
 
 const filepath:string = "https://raw.githubusercontent.com/rpi-crisis/data/main/";
-const courses_name:string = "courses_format2.json";
+const courses_name:string = "model_data.json";
 const version_name:string = "meta";
 let db_version:string = "";
 let local_version:string = "";
@@ -65,7 +65,7 @@ function fetchData(): void {
         updateReady(true)
         console.log("Updated files to match server"); // Debug logging
         console.log("Set local_version to: " + local_version); // Debug logging
-        console.log("File: courses.json fetched"); // Debug logging
+        console.log("File: " + courses_name + "fetched"); // Debug logging
         // console.log(data); // Debug logging
       });
     })

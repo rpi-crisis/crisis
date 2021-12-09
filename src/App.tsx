@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import HomePage from './pages/home';
 import AboutPage from './pages/about';
-import TestInput from "./pages/test-input";
+import TestSearch from "./pages/test-search";
 import init from "./scripts/data-fetch"
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <Switch>
         <Route exact={true} path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
-        <Route path="/search" component={TestInput} />
+        <Route path="/search" component={TestSearch} />
         <Route render={() => <h1>Error 404: Page not found</h1>} />
       </Switch>
     </Router>

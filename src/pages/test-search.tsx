@@ -1,5 +1,5 @@
-import React, { useState, FC } from "react";
-import InputComponent from "../components/input-component";
+import React, { useState, useEffect, FC } from "react";
+import TextInput from "../components/text-input";
 import { getJsonData } from "../scripts/data-fetch"
 import { search } from "../scripts/fuzzy-search"
 import '../theme.css';
@@ -10,8 +10,7 @@ interface InputState {
 }
 
 let courses_json: any[] = [];
-let tte: number = performance.now();
-let searched: boolean = false;
+let searched: boolean = false; // TODO make it say loading before the first search is completed
 
 getJsonData()
   .then(res => {
@@ -20,11 +19,12 @@ getJsonData()
   }
 );
 
-const TestInput : FC = () => {
+const TestSearch : FC = () => {
 
   const [state, setState] = useState<InputState>({results: [], time: 0});
   const [input, setInput] = useState<string>("");
-  const [ignore, update] = useState<number>(0);
+
+  const [search_text, search_update] = useState<string>("");
 
   function searchQuery(query: string): void {
     if(query==="") {
@@ -37,27 +37,21 @@ const TestInput : FC = () => {
     setState({ results, time: Math.round(after-before) });
   }
 
-  function onInput(){
-    if(input.length < 10) {
-      tte = performance.now() + 200;
-    } else {
-      tte = performance.now() + 400;
-    }
-    searched = false;
+  const log_change = (value:string):void => {
+    console.log(value);
+    searchQuery(value);
+    search_update(value);
   }
 
-  /* TODO figure out how to make this just happen. Maybe have a custom async sleeping promise stored for this component
-     that is cancelable when a new keypress happens.
-  */
-  if(!searched && tte <= performance.now()){
-    searched = true;
-    searchQuery(input);
-  }
+  useEffect(() => {
+    const timeOutId = setTimeout(() => log_change(input), 200);
+    return () => clearTimeout(timeOutId);
+  }, [input]);
 
   return (
     <div>
-      <InputComponent id="search" placeholder="Enter text to search" setOutside={setInput} runOnInput={onInput}/>
-      <p>{ (!searched) ? "loading..." : "" }</p>
+      <TextInput id="search" placeholder="Enter text to search" setOutside={setInput} runOnInput={setInput}/>
+      <p>{ /*(!searched) ? "loading..." : ""*/ }</p>
       {state.results.length === 0 ? <div>Empty</div> :
         <div>
           {state.results.map(course =><div key={course.id}><code>{course.id}</code> {course.title}</div>)}
@@ -68,4 +62,4 @@ const TestInput : FC = () => {
   );
 }
 
-export default TestInput;
+export default TestSearch;

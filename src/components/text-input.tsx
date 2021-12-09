@@ -1,7 +1,7 @@
 import React, {Dispatch, FC, FormEvent, SetStateAction} from "react";
 
 type onInputFunction = (arg:string) => void;
-const InputComponent : FC<{id:string, placeholder:string, setOutside: Dispatch<SetStateAction<string>>, runOnInput:onInputFunction}> = ({id, placeholder, setOutside, runOnInput}) => {
+const TextInput : FC<{id:string, placeholder:string, setOutside: Dispatch<SetStateAction<string>>, runOnInput:onInputFunction}> = ({id, placeholder, setOutside, runOnInput}) => {
 
   if(!placeholder) placeholder = "";
   if(!id) id = "";
@@ -10,7 +10,6 @@ const InputComponent : FC<{id:string, placeholder:string, setOutside: Dispatch<S
     let trimmed = event.currentTarget.value.trim() as string;
     setOutside(trimmed);
     runOnInput(trimmed);
-    console.log(trimmed);
   }
 
   return(
@@ -23,4 +22,4 @@ const InputComponent : FC<{id:string, placeholder:string, setOutside: Dispatch<S
   );
 }
 
-export default InputComponent;
+export default TextInput;
