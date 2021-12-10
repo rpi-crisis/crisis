@@ -8,7 +8,7 @@
   display: flex;
   width: 40ch;
   border: solid;
-  height: 4ch;
+  min-height: 4ch;
   transition: 0.2s;
 }
 
