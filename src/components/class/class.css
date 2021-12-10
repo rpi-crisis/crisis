@@ -88,6 +88,7 @@
   width: 60%;
   height: 35%;
   overflow: scroll;
+  overflow-x: hidden;
   transform: translate(-10%,0);
   padding: 0.5em;
   border-radius: 0.5em;
@@ -102,6 +103,7 @@
   width: 60%;
   height: 35%;
   overflow: scroll;
+  overflow-x: hidden;
   transform: translate(-10%,0);
   padding: 0.5em;
   color: var(--text-color);
@@ -138,7 +140,7 @@
   transform: rotate(-45deg);
 }
 .exit::after{
-  transform: rotate(45deg); 
+  transform: rotate(45deg);
 }
 
 .exit:hover {
