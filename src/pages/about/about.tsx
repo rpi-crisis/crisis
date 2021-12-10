@@ -5,7 +5,6 @@ import NavBar from "../../components/navbar/navbar";
 import Pages from "../pageList";
 
 const AboutPage: FC = () => {
-
   return (
     <div className="App">
       <header className="info-header">

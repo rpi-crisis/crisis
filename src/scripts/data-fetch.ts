@@ -65,7 +65,7 @@ function fetchData(): void {
         updateReady(true)
         console.log("Updated files to match server"); // Debug logging
         console.log("Set local_version to: " + local_version); // Debug logging
-        console.log("File: " + courses_name + "fetched"); // Debug logging
+        console.log("File: " + courses_name + " fetched"); // Debug logging
         // console.log(data); // Debug logging
       });
     })

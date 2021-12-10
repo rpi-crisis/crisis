@@ -6,7 +6,7 @@ const SearchBar: FC<{content_update:(content:string)=>void}> = ({content_update}
     <div>
       <div className="searchbar">
         <div className="textbox">
-          <input name='search' onChange={(e) => content_update(e.target.value)} placeholder="Enter Class"></input>
+          <input name='search' onChange={(e) => content_update(e.target.value)} placeholder="Enter Class"/>
         </div>
       </div>
     </div>
