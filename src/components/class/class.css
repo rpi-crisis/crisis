@@ -1,0 +1,147 @@
+@import "../../theme.css";
+
+.class {
+  margin-top: 0.4em;
+  font-size: 0.8em;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  width: 40ch;
+  border: solid;
+  min-height: 4ch;
+  transition: 0.2s;
+}
+
+.class:hover {
+  transform: scale(1.1);
+  color: var(--text-color);
+}
+
+.cover {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  background: #000D;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+}
+
+.detailed {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  background-color: var(--bg-color);
+  border: solid var(--text-color);
+  border-radius: 1em;
+  z-index: 2;
+  overflow: auto;
+  padding: 0.5em;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#class-header {
+ width: 100%;
+ display: flex;
+ flex-flow: row;
+ justify-content: flex-start;
+ margin-top: 0.5em;
+ font-size: 1.05em;
+}
+
+#class-header>* {
+  width: 20%;
+  margin: auto;
+}
+
+#class-header>*:first-child{
+  width: 40%
+}
+
+#class-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  margin-top: 1em;
+}
+
+.body-title {
+  text-align: left;
+  width: 70%;
+}
+
+#class-description {
+  width: 60%;
+  height: 35%;
+  overflow: scroll;
+  transform: translate(-10%,0);
+  padding: 0.5em;
+  border-radius: 0.5em;
+  color: var(--text-color);
+  border: solid var(--highlight-color);
+  text-align: left;
+  text-indent: 2em;
+  font-size: 0.8em;
+}
+
+#transfers {
+  width: 60%;
+  height: 35%;
+  overflow: scroll;
+  transform: translate(-10%,0);
+  padding: 0.5em;
+  color: var(--text-color);
+  border: solid var(--highlight-color);
+  border-radius: 0.5em;
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.exit {
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  width: 1em;
+  aspect-ratio: 1;
+  transition: 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --icon-color: var(--text-color)
+}
+
+.exit::before, .exit::after{
+ background-color: var(--icon-color);
+ content: "";
+ display: inline-block;
+ width:  1em;
+ height: 0.3em;
+ border-radius: 0.1em;
+ position: absolute;
+}
+
+.exit::before{
+  transform: rotate(-45deg);
+}
+.exit::after{
+  transform: rotate(45deg); 
+}
+
+.exit:hover {
+  transform: scale(1.2);
+  --icon-color: var(--highlight-color);
+}

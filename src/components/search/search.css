@@ -63,7 +63,7 @@
 
  input {
    height: 1.3em;
-   width: clamp(50vmin,75vmin, 40ch);
+   width: clamp(50vw, 40ch, 90vw);
    font-size: inherit;
    background: var(--nav-color);
    border-color: var(--nav-color);

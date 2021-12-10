@@ -2,6 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import HomePage from './pages/home/home';
 import AboutPage from './pages/about/about';
+//import TestSearch from "./pages/test-search";
 import init from "./scripts/data-fetch"
 
 function App() {
@@ -17,5 +18,5 @@ function App() {
     </Router>
   );
 }
-
+//<Route path="/search" component={TestSearch} />
 export default App;

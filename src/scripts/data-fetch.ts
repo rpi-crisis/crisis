@@ -6,7 +6,7 @@
 import * as localforage from "localforage";
 
 const filepath:string = "https://raw.githubusercontent.com/rpi-crisis/data/main/";
-const courses_name:string = "courses.json";
+const courses_name:string = "model_data.json";
 const version_name:string = "meta";
 let db_version:string = "";
 let local_version:string = "";
@@ -21,18 +21,21 @@ function updateReady(value:boolean){
   ready = value;
 }
 
-function init(){
+function init(): void {
   if(!is_init && !ready) {
     is_init = true;
     localforage.getItem("data_version")
       .then((data_version_value)=>{
         local_version = data_version_value as string;
         fetchVersion();
+    }).catch((err)=>{
+      console.log(err)
+      return null;
     });
   }
 }
 
-function fetchVersion() {
+function fetchVersion(): void {
   fetch(filepath+version_name)
     .then(response => { response.text()
       .then((version_text) => {
@@ -52,7 +55,7 @@ function fetchVersion() {
   });
 }
 
-function fetchData() {
+function fetchData(): void {
   fetch(filepath + courses_name)
     .then(response => response.json())
     .then(data => {
@@ -62,7 +65,7 @@ function fetchData() {
         updateReady(true)
         console.log("Updated files to match server"); // Debug logging
         console.log("Set local_version to: " + local_version); // Debug logging
-        console.log("File: courses.json fetched"); // Debug logging
+        console.log("File: " + courses_name + "fetched"); // Debug logging
         // console.log(data); // Debug logging
       });
     })
@@ -72,4 +75,11 @@ function fetchData() {
     });
 }
 
+// Do not use inside a component which is re-rendered often.
+async function getJsonData(): Promise<any> {
+  return JSON.parse(await localforage.getItem("courses_json") as string);
+}
+
 export default init;
+
+export { getJsonData };
