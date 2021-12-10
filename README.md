@@ -1,4 +1,4 @@
-# CRISIS: Correcting RPI's Insufferable SIS  
+# CRISIS: Correcting Rensselaer's Insufferable SIS  
 
 CRISIS is an open source RCOS project: a website that houses various course and major related tools for my college, Rensselaer Polytechnic Institute, since we believe that the offered tools are insufficient.  
 From the highest priority to lowest this would include:  
