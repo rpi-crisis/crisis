@@ -6,8 +6,10 @@
 #### Colin Melville
 
 ## Developers
-- Akeyl Gray (Spring 2022 - current)
-- Maryellen Marino (Fall 2021 - current)  
-- Pratik Yallapragada (Fall 2021 - current)  
-- Emma Clements (Fall 2021 - current)  
-- Donna Kim (Fall 2021 - current)
+Akeyl Gray (Spring 2022 - current)
+Jiawei Wu (Spring 2022)
+Muhammad Alafifi (Spring 2022)
+Maryellen Marino (Fall 2021 - current)  
+Pratik Yallapragada (Fall 2021 - current)  
+Emma Clements (Fall 2021 - current)  
+Donna Kim (Fall 2021 - current)
