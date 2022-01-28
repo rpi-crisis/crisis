@@ -1,5 +1,5 @@
 ## Founder
-#### [Trevor Brunette](http://www.trevorbru.net/)
+#### [Trevor Brunette](http://www.trevorbrunette.net/)
 
 
 ## Co-Founder
@@ -7,7 +7,7 @@
 
 ## Developers
 Lily Ritter (Spring 2022)
-Maryellen Marino (Fall 2021 - current)
-Pratik Yallapragada (Fall 2021 - current)
-Emma Clements (Fall 2021 - current)
-Donna Kim (Fall 2021 - current)
+Maryellen Marino (Fall 2021)
+Pratik Yallapragada (Fall 2021)
+Emma Clements (Fall 2021)
+Donna Kim (Fall 2021)
