@@ -1,15 +1,16 @@
 ## Founder
-#### [Trevor Brunette](http://www.trevorbru.net/)
+#### [Trevor Brunette](http://www.trevorbrunette.net/)
 
 
 ## Co-Founder
 #### Colin Melville
 
 ## Developers
-Akeyl Gray (Spring 2022 - current)
-Jiawei Wu (Spring 2022)
-Muhammad Alafifi (Spring 2022)
-Maryellen Marino (Fall 2021 - current)  
-Pratik Yallapragada (Fall 2021 - current)  
-Emma Clements (Fall 2021 - current)  
-Donna Kim (Fall 2021 - current)
+- Lily Ritter (Spring 2022)
+- Akeyl Gray (Spring 2022)
+- Jiawei Wu (Spring 2022)
+- Muhammad Alafifi (Spring 2022)
+- Maryellen Marino (Fall 2021)
+- Pratik Yallapragada (Fall 2021)
+- Emma Clements (Fall 2021)
+- Donna Kim (Fall 2021)
