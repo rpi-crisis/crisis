@@ -6,6 +6,7 @@
 #### Colin Melville
 
 ## Developers
+Jiawei Wu (Spring 2022)
 Muhammad Alafifi (Spring 2022)
 Maryellen Marino (Fall 2021 - current)  
 Pratik Yallapragada (Fall 2021 - current)  
