@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 @font-face{
     font-family: "Fjalla One";
-    src: url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap') format(".ttf");
+    src: url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
     font-weight: normal;
     font-style: normal;
 }
@@ -12,6 +13,7 @@
     box-sizing: border-box;
     font-family: 'Open Sans';
     color: #777;
+    font-size: 1.08em;
 }
 
 html, body{
@@ -67,5 +69,115 @@ html, body{
 }
 
 .artistName-large{
-    font-size: 5em;
+    font-size: 8em;
+}
+
+.content_section{
+    margin: 1em;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 0 1.5em;
+    text-align: left;
+}
+
+.section_header{
+    font-family: 'Permanent Marker';
+    font-weight: normal;
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.mainImage{
+    height: 1000px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.mainFooter{
+    background-color: rgba(203, 195, 227);
+    color: white;
+    padding: .25em 0;
+}
+
+.mainFooter_container{
+    display: flex;
+    align-items: center;
+}
+
+.mainFooter_container ul{
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footerNav li{
+    padding: 0 .5em;
+}
+
+.footerNav img{
+    width: 30px;
+    height: 30px;
+}
+
+.btn{
+    text-align: center;
+    vertical-align: middle;
+    padding:.67em;
+    cursor: pointer;
+}
+
+.btnHeader{
+    margin: .5em 15% 2em 15%;
+    color:white;
+    border:2px solid purple;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+.btnHeader:hover{
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.tour-row{
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+}
+
+.tour-row:last-child{
+    border-bottom: none;
+}
+
+.tour-item {
+    display: inline-block;
+    padding-right: 0.5em;
+    
+}
+
+.tour-date {
+    color: #555;
+    font-weight: bolder;
+    width: 11%;
+}
+
+.tour-city{
+    width: 24%;
+}
+
+.tour-place{
+    width: 42%;
+}
+
+.tour-btn{
+    max-width: 19%;
+}
+
+.hobbies-etc{
+    font-weight: bold;
 }
