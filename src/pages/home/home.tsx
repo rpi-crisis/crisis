@@ -1,5 +1,5 @@
 import React, { FC, useState, useEffect } from "react";
-import logo from '../../res/images/kool-aid_cat.png';
+//import logo from '../../res/images/kool-aid_cat.png';
 import './home.css';
 
 import { getJsonData } from "../../scripts/data-fetch";
