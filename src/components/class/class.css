@@ -123,11 +123,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  --icon-color: var(--text-color)
 }
 
 .exit::before, .exit::after{
- background-color: var(--icon-color);
+ background-color: var(--text-color);
  content: "";
  display: inline-block;
  width:  1em;
