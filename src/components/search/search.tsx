@@ -1,7 +1,7 @@
-import React, { FC } from "react";
-import "./search.css"
+import React, { FC } from 'react';
+import './search.css';
 //import Tag from "./tag/tag";
-const SearchBar: FC<{content_update:(content:string)=>void}> = ({content_update}) => {
+const SearchBar: FC<{content_update: (content: string)=> void}> = ({content_update}) => {
   return (
     <div>
       <div className="searchbar">
@@ -10,7 +10,7 @@ const SearchBar: FC<{content_update:(content:string)=>void}> = ({content_update}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default SearchBar;

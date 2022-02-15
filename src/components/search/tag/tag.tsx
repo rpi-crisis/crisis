@@ -1,10 +1,10 @@
-import React, { FC } from "react";
+import React, { FC } from 'react';
 import './tag.css';
 
-const Tag: FC<{name:string, remove:(name:string)=>void}> = ({name,remove}) => {
-  const click =  ():void => {
+const Tag: FC<{name: string, remove: (name: string)=> void}> = ({name,remove}) => {
+  const click =  (): void => {
     remove(name);
-  }
+  };
 
   return (
     <div className='tag' onClick={click}>
@@ -15,5 +15,5 @@ const Tag: FC<{name:string, remove:(name:string)=>void}> = ({name,remove}) => {
       </div>
     </div>
   );
-}
+};
 export default Tag;

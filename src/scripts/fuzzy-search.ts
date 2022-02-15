@@ -1,6 +1,6 @@
 import Fuse from 'fuse.js';
 
-function search(query: string, json:any, keys:string[]): any[] {
+function search(query: string, json: any, keys: string[]): any[] {
   if (!json) return [];
 
   const options = {
@@ -20,7 +20,7 @@ function search(query: string, json:any, keys:string[]): any[] {
   };
 
   const fuse = new Fuse(json, options);
-  const result = fuse.search(query)
+  const result = fuse.search(query);
   return result.slice(0, 10).map(x => x.item);
 
 }
