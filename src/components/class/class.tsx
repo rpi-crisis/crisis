@@ -41,9 +41,9 @@ const Class: FC<{data:any}> = ({data}) => {
 	    </div>
 	    <div className="body-title">Transfers</div>
 	    <div id="transfers">
-	      {data.transfer.length>0?data.transfer.map((el:any) => {
+	      {data.transfer.length>0?data.transfer.map((el:any, pos: number) => {
 	        return (
-		<div id="class-header">
+		<div id="class-header" key={pos}>
 		  <div>{el.title}</div>
 		  <div>{el.id}</div>
 		  <div>{el.school}</div>

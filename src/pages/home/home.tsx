@@ -9,6 +9,8 @@ import NavBar from '../../components/navbar/navbar';
 import SearchBar from '../../components/search/search';
 import Pages from '../pageList'
 import Class from "../../components/class/class";
+import { useAppDispatch, useAppSelector } from "../../store";
+import { EMPTY_COURSES, FETCH_COURSES, ADD_COURSE } from "../../store/slices/courseSlice";
 
 interface InputState {
   results: any[];
@@ -25,6 +27,24 @@ getJsonData()
 );
 
 const HomePage: FC = () => {
+
+  const courseState = useAppSelector(state => state.courses.courses);
+  const hasError = useAppSelector(state => state.courses.hasError);
+  const dispatch = useAppDispatch();
+  
+  console.log(courseState);
+  
+  const addCourses = () => {
+    dispatch(ADD_COURSE({name: "data structures"}));
+  }
+
+  const clearCourses = () => {
+    dispatch(EMPTY_COURSES());
+  }
+
+  const fetchCourses = () => {
+    dispatch(FETCH_COURSES());
+  }
 
   const [state, setState] = useState<InputState>({results:[], time:0});
 
@@ -56,8 +76,17 @@ const HomePage: FC = () => {
         <header className="App-header">
           <NavBar pages={Pages("Home")}/>
 	        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h3>CRISIS - Correcting RPI's Insufferable SIS</h3>
+          <h3>CRISIS - Correcting Rensselaer's Insufferable SIS</h3>
           <SearchBar content_update={content_update}/>
+          {hasError && (
+            <h2>THERES AN ERROR!!!!</h2>
+          )}
+          <button onClick={addCourses}>add course</button>
+          <button onClick={clearCourses}>clear courses</button>
+          <button onClick={fetchCourses}>fetch courses</button>
+          {Object.entries(courseState).map(entry => (
+            <p>{entry[1].name}</p>
+          ))}
 	        {state.results.map((el,pos) => {return <Class key={pos} data={el}/>})}
         </header>
       </div>
