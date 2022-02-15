@@ -1,5 +1,5 @@
-import React, { FC, useState, useEffect } from 'react';
-import './class.css';
+import React, { FC, useState, useEffect } from "react";
+import "./class.css";
 
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 const Class: FC<{data: any}> = ({data}) => {
@@ -16,9 +16,9 @@ const Class: FC<{data: any}> = ({data}) => {
         update_display(false);
       }
     };
-    window.addEventListener('keydown', handleEsc);
+    window.addEventListener("keydown", handleEsc);
     return () => {
-      window.removeEventListener('keydown', handleEsc);
+      window.removeEventListener("keydown", handleEsc);
     };
   });
 
@@ -27,7 +27,7 @@ const Class: FC<{data: any}> = ({data}) => {
       <div className="class" onClick={toggle_shown}>
         {data.id}<br/>{data.title}
       </div>
-      <div className="wrapper" style={{display:display ? 'flex' : 'none'}}>
+      <div className="wrapper" style={{display:display ? "flex" : "none"}}>
         <div className="cover" onClick={toggle_shown} />
         <div className="detailed">
           <div className="exit" onClick={toggle_shown}/>

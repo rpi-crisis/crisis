@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
-import './tag.css';
+import React, { FC } from "react";
+import "./tag.css";
 
 const Tag: FC<{name: string, remove: (name: string)=> void}> = ({name,remove}) => {
   const click =  (): void => {
@@ -10,8 +10,8 @@ const Tag: FC<{name: string, remove: (name: string)=> void}> = ({name,remove}) =
     <div className='tag' onClick={click}>
       {name}
       <div className='remove'>
-        <div id="l"></div>
-        <div id="r"></div>
+        <div id="l" />
+        <div id="r" />
       </div>
     </div>
   );

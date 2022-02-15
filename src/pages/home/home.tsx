@@ -1,14 +1,14 @@
-import React, { FC, useState, useEffect } from 'react';
+import React, { FC, useState, useEffect } from "react";
 //import logo from '../../res/images/kool-aid_cat.png';
-import './home.css';
+import "./home.css";
 
-import { getJsonData } from '../../scripts/data-fetch';
-import { search } from '../../scripts/fuzzy-search';
+import { getJsonData } from "../../scripts/data-fetch";
+import { search } from "../../scripts/fuzzy-search";
 
-import NavBar from '../../components/navbar/navbar';
-import SearchBar from '../../components/search/search';
-import Pages from '../pageList';
-import Class from '../../components/class/class';
+import NavBar from "../../components/navbar/navbar";
+import SearchBar from "../../components/search/search";
+import Pages from "../pageList";
+import Class from "../../components/class/class";
 
 interface InputState {
   /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
@@ -30,15 +30,15 @@ const HomePage: FC = () => {
 
   const [state, setState] = useState<InputState>({results:[], time:0});
 
-  const [searchbar_content, content_update] = useState<string>('');
+  const [searchbar_content, content_update] = useState<string>("");
 
   const searchQuery = (query: string): void => {
-    if(query === '') {
+    if(query === "") {
       setState({results: [], time: 0});
       return;
     }
     const before = performance.now();
-    const results = search(query, courses_json, ['id', 'title', 'description']).slice(0,5);
+    const results = search(query, courses_json, ["id", "title", "description"]).slice(0,5);
     const after = performance.now();
     console.log(results);
     setState({results: results, time: Math.round(after - before)});
@@ -56,9 +56,9 @@ const HomePage: FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <NavBar pages={Pages('Home')}/>
+        <NavBar pages={Pages("Home")}/>
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        <h3>CRISIS - Correcting Rensselaer{'\''}s Insufferable SIS</h3>
+        <h3>CRISIS - Correcting Rensselaer{"'"}s Insufferable SIS</h3>
         <SearchBar content_update={content_update}/>
         {state.results.map((el,pos) => {return <Class key={pos} data={el}/>;})}
       </header>

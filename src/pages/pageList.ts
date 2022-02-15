@@ -1,20 +1,20 @@
 const Pages = (current: string) => {
   const pages: {text: string, path: string, active: boolean, external?: string}[] = [
     {
-      text:'Home',
-      path:'/',
+      text:"Home",
+      path:"/",
       active:false
     },
     {
-      text:'About',
-      path:'/about',
+      text:"About",
+      path:"/about",
       active:false
     },
     {
-      text:'GitHub',
-      path:'/',
+      text:"GitHub",
+      path:"/",
       active:false,
-      external:'https://github.com/rpi-crisis/crisis'
+      external:"https://github.com/rpi-crisis/crisis"
     }
   ];
 
