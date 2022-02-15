@@ -1,5 +1,6 @@
 import Fuse from 'fuse.js';
 
+/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 function search(query: string, json: any, keys: string[]): any[] {
   if (!json) return [];
 

@@ -1,6 +1,7 @@
 import React, { FC, useState, useEffect } from 'react';
 import './class.css';
 
+/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 const Class: FC<{data: any}> = ({data}) => {
   const [display, update_display] = useState<boolean>(false);
 
@@ -9,6 +10,7 @@ const Class: FC<{data: any}> = ({data}) => {
   };
 
   useEffect(() => {
+    /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
     const handleEsc = (event: any) => {
       if (event.keyCode === 27){
         update_display(false);
@@ -41,6 +43,7 @@ const Class: FC<{data: any}> = ({data}) => {
             </div>
             <div className="body-title">Transfers</div>
             <div id="transfers">
+              {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
               {data.transfer.length > 0 ? data.transfer.map((el: any, pos: number) => (
                 <div id="class-header" key={pos}>
                   <div>{el.title}</div>

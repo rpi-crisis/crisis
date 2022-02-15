@@ -76,6 +76,7 @@ function fetchData(): void {
 }
 
 // Do not use inside a component which is re-rendered often.
+/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 async function getJsonData(): Promise<any> {
   return JSON.parse(await localforage.getItem('courses_json') as string);
 }

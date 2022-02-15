@@ -11,10 +11,12 @@ import Pages from '../pageList';
 import Class from '../../components/class/class';
 
 interface InputState {
+  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
   results: any[];
   time: number;
 }
 
+/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 let courses_json: any[] = [];
 //let searched: boolean = false //TODO make it say loading before search completed
 
