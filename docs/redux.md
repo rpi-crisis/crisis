@@ -118,3 +118,8 @@ const slice = createSlice({
 Once you had made a slice inside the `src/store/slices` directory, you need to add the slice reducer to the root reducer.
 
 To do this just add the slice to the `combineReducers` function call inside the store.
+
+### DevTools
+
+You can download [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+to help in the development process. You will be able to see the full timeline/history of the state and any actions performed.
