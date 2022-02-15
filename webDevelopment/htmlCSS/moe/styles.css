@@ -13,7 +13,7 @@
     box-sizing: border-box;
     font-family: 'Open Sans';
     color: #777;
-    font-size: 1.08em;
+    font-size: 1.04em;
 }
 
 html, body{
@@ -91,7 +91,10 @@ html, body{
 }
 
 .mainImage{
-    height: 1000px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
     width: auto;
     border-radius: 50%;
 }
@@ -128,6 +131,10 @@ html, body{
     cursor: pointer;
 }
 
+.btnCart{
+    background-color: lightsalmon;
+}
+
 .btnHeader{
     margin: .5em 15% 2em 15%;
     color:white;
@@ -148,6 +155,7 @@ html, body{
     border-bottom: 1px solid black;
     padding-bottom: 1em;
     margin-bottom: 1em;
+    font-size: large;
 }
 
 .tour-row:last-child{
@@ -180,4 +188,9 @@ html, body{
 
 .hobbies-etc{
     font-weight: bold;
+}
+
+.sectionCompact{
+    padding-left: 12em;
+    padding-right: 12em;
 }
