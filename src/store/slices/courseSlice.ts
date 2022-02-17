@@ -60,7 +60,7 @@ const slice = createSlice({
     extraReducers: (builder) => {
         builder.addCase(FETCH_COURSES.rejected, (state, action) => {
             state.hasError = true;
-        })
+        });
     }
 });
 
