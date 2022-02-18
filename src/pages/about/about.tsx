@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import './about.css';
+import "./about.css";
 import NavBar from "../../components/navbar/navbar";
 
 import Pages from "../pageList";
@@ -16,5 +16,5 @@ const AboutPage: FC = () => {
       </header>
     </div>
   );
-}
+};
 export default AboutPage;
