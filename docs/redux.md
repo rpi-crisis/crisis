@@ -26,7 +26,7 @@ const dispatch = useAppDispatch();
 
 // Now you can call dispatch with an action
 
-import { ADD_COURSE } from '../../store/slices/courseSlice';
+import { ADD_COURSE } from '../../store/slices/courses';
 
 const course = {}; // this would be some Course object
 
