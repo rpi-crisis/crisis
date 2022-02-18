@@ -3,10 +3,12 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import HomePage from "./pages/home/home";
 import AboutPage from "./pages/about/about";
 //import TestSearch from "./pages/test-search";
-import init from "./scripts/data-fetch";
+import { useAppDispatch } from "./store";
+import { CHECK_VERSION } from "./store/slices/courses";
 
 function App() {
-  init();
+  const dispatch = useAppDispatch();
+  dispatch(CHECK_VERSION());
 
   return (
     <Router>
