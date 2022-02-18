@@ -1,7 +1,7 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import localforage from "localforage";
-import { useDispatch, useSelector } from "react-redux";
-import { persistReducer } from "redux-persist";
+import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import { persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from "redux-persist";
 import courseSlice from "./slices/courseSlice";
 
 const rootReducer = combineReducers({
@@ -13,9 +13,17 @@ const config = {
   storage: localforage
 };
 
+const reducer = persistReducer(config, rootReducer);
+
 export const store = configureStore({
-  reducer: persistReducer(config, rootReducer),
-  devTools: process.env.NODE_ENV !== "production"
+  reducer: reducer,
+  devTools: process.env.NODE_ENV !== "production",
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER]
+      }
+    })
 });
 
 export type RootState = ReturnType<typeof store.getState>;
@@ -24,6 +32,4 @@ export type AppDispatch = typeof store.dispatch;
 
 export const useAppDispatch = () => useDispatch<AppDispatch>();
 
-export function useAppSelector<TSelected = unknown>(selector: (state: RootState)=> TSelected): TSelected {
-  return useSelector(selector);
-}
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;
