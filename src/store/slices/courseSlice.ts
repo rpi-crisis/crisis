@@ -12,56 +12,57 @@ type State = {
 };
 
 const initialState: State = {
-    courses: {},
-    hasError: false
+  courses: {},
+  hasError: false
 };
 
 function sleep(ms: number) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-};
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 export const FETCH_COURSES = createAsyncThunk(
-    "courses/fetchCourses",
-    async (data, thunkAPI) => {
-        const response = await sleep(1000);
-        const bool = Math.floor(Math.random() * 2) === 0 ? true : false;
-        const resData = [
-            {
-                name: "data structures"
-            },
-            {
-                name: "comp org"
-            }
-        ];
-        if (bool) {
-            thunkAPI.dispatch(EMPTY_COURSES());
-            resData.map((course) => {
-                thunkAPI.dispatch(ADD_COURSE(course));
-            });
-        }
-        else {
-            return thunkAPI.rejectWithValue("error");
-        }
-        
+  "courses/fetchCourses",
+  async (data, thunkAPI) => {
+    /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
+    const response = await sleep(1000);
+    const bool = Math.floor(Math.random() * 2) === 0 ? true : false;
+    const resData = [
+      {
+        name: "data structures"
+      },
+      {
+        name: "comp org"
+      }
+    ];
+    if (bool) {
+      thunkAPI.dispatch(EMPTY_COURSES());
+      resData.map((course) => {
+        thunkAPI.dispatch(ADD_COURSE(course));
+      });
     }
+    else {
+      return thunkAPI.rejectWithValue("error");
+    }
+        
+  }
 );
 
 const slice = createSlice({
-    name: 'course',
-    initialState: initialState,
-    reducers: {
-        ADD_COURSE(state, action: PayloadAction<Course>) {
-            state.courses[action.payload.name] = action.payload;
-        },
-        EMPTY_COURSES(state) {
-            state.courses = {};
-        }
+  name: "course",
+  initialState: initialState,
+  reducers: {
+    ADD_COURSE(state, action: PayloadAction<Course>) {
+      state.courses[action.payload.name] = action.payload;
     },
-    extraReducers: (builder) => {
-        builder.addCase(FETCH_COURSES.rejected, (state, action) => {
-            state.hasError = true;
-        })
+    EMPTY_COURSES(state) {
+      state.courses = {};
     }
+  },
+  extraReducers: (builder) => {
+    builder.addCase(FETCH_COURSES.rejected, (state) => {
+      state.hasError = true;
+    });
+  }
 });
 
 export const { ADD_COURSE, EMPTY_COURSES } = slice.actions;
