@@ -9,6 +9,7 @@ import NavBar from "../../components/navbar/navbar";
 import SearchBar from "../../components/search/search";
 import Pages from "../pageList";
 import Class from "../../components/class/class";
+import Settings from "../../components/settings/settings";
 
 interface InputState {
   /* eslint-disable-next-line @typescript-eslint/no-explicit-any */

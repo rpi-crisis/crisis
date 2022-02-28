@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./navbar.css";
 import Settings from "../settings/settings";
 
+import Logo from "../../res/images/kool-aid_cat.png";
+
 type page = {
     text: string,
     path: string,
@@ -47,18 +49,21 @@ const NavBar: FC<{pages: page[]}> = ({pages}) => {
   );
 
   return (
-    <div className="bar">
-      {pages.map((el,pos) => (
-        <div className="link-box"
-          style={el.active ?
-            {background :"var(--text-color)",color:"var(--bg-color)"} :
-            {background :"var(--nav-color)",color:"var(--text-color)"}
-          }
-          key={pos}
-        >
-          {boxes[pos]}
-        </div>
-      ))}
+    <div className="overarching-bar bar">
+      <img src={Logo} className="nav-logo"></img>
+      <a className="bar">
+        {pages.map((el,pos) => (
+          <div className="link-box"
+            style={el.active ?
+              {background :"var(--text-color)",color:"var(--bg-color)"} :
+              {background :"var(--nav-color)",color:"var(--text-color)"}
+            }
+            key={pos}
+          >
+            {boxes[pos]}
+          </div>
+        ))}
+      </a>
       <Settings />
     </div>
   );

@@ -34,6 +34,8 @@ const Settings = () => {
         <div className="detailed">
           <div className="exit" onClick={toggle_shown}/>
           
+          <h3><u>Settings:</u></h3>
+          abcdefg
           
         </div>
       </div>
