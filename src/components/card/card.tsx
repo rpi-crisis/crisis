@@ -1,7 +1,7 @@
 import React, { FC } from "react";
-import './card.css';
+import "./card.css";
 
-const Card: FC<{head:string, content:string}> = ({head,content}) => {
+const Card: FC<{head: string, content: string}> = ({head,content}) => {
   return (
     <div className='card'>
       <div className='head'>
@@ -11,7 +11,7 @@ const Card: FC<{head:string, content:string}> = ({head,content}) => {
         {content}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Card;

@@ -1,4 +1,5 @@
 @import "../../theme.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 .info-header {
   background-color: var(--bg-color);
@@ -6,12 +7,36 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: var(--header-color);
 }
 
 .about-text{
-    max-width: 960px;
-    color: var(--text-color)
+  max-width: 960px;
+  color: var(--text-color);
+  font-family: 'Open Sans', sans-serif;
+  font-size: smaller;
 }
+
+.sub-header{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bolder;
+  margin-bottom: 0px;
+}
+
+.little-header{
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+.boxes{
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.box{
+  float: left;
+  width: 500px;
+  text-align: center;
+}
+
