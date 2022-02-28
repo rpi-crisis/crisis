@@ -45,7 +45,6 @@
 .nav-logo{
   border: none;
   padding: none;
-  margin: 2px;
   float: inline-end;
   margin-right: auto;
   margin-left: 1em;
@@ -56,14 +55,6 @@
 }
 
 .nav-logo:hover{
-  animation: shrink 1.2s 1 ease;
-}
-
-@keyframes shrink {
-  from {
-      transform: scale(1);
-  }
-  to {
-      transform: scale(0.1);
-  }
+  transition: 2s;
+  transform: scale(0.00001);
 }

@@ -29,13 +29,13 @@ const Settings = () => {
         <BiCog className="settings-icon"/>
       </span>
 
-      <div className="wrapper" style={{display:display ? "flex" : "none"}}>
-        <div className="cover" onClick={toggle_shown} />
-        <div className="detailed">
-          <div className="exit" onClick={toggle_shown}/>
+      <div className="settings-wrapper" style={{display:display ? "flex" : "none"}}>
+        <div className="settings-cover" onClick={toggle_shown} />
+        <div className="settings-detailed">
+          <div className="settings-exit" onClick={toggle_shown}/>
           
           <h3><u>Settings:</u></h3>
-          abcdefg
+          
           
         </div>
       </div>

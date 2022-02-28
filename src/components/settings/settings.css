@@ -8,7 +8,7 @@
   margin: 2px;
   float: inline-end;
   margin-left: auto;
-  margin-right: 1em;/*shoves everything else leftward*/
+  margin-right: 1em;
   display: flex;
   align-items: flex;
   justify-content: center;
@@ -32,7 +32,7 @@
     }
 }
 
-.cover {
+.settings-cover {
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -43,19 +43,11 @@
   align-items: center;
 }
 
-@keyframes grow{
-    from{
-        transform: scale(0.2);
-    }
-    to{
-        transform: scale(1);
-    }
-}
-
-.detailed {
+.settings-detailed {
   position: relative;
-  width: 80%;
-  height: 80%;
+  top: 40vh;
+  width: 50vw;
+  height: 60vh;
   background-color: var(--bg-color);
   border: solid var(--text-color);
   border-radius: 1em;
@@ -68,7 +60,7 @@
   align-items: center;
 }
 
-.wrapper {
+.settings-wrapper {
   position: absolute;
   justify-content: center;
   align-items: center;
@@ -76,7 +68,7 @@
 }
 
 
-.exit {
+.settings-exit {
   position: absolute;
   right: 0.5em;
   top: 0.5em;
@@ -88,7 +80,7 @@
   align-items: center;
 }
   
-.exit::before, .exit::after{
+.settings-exit::before, .settings-exit::after{
  background-color: var(--text-color);
  content: "";
  display: inline-block;
@@ -98,14 +90,14 @@
  position: absolute;
 }
   
-.exit::before{
+.settings-exit::before{
   transform: rotate(-45deg);
 }
-.exit::after{
+.settings-exit::after{
   transform: rotate(45deg);
 }
 
-.exit:hover {
+.settings-exit:hover {
   transform: scale(1.2);
   --icon-color: var(--highlight-color);
 }
