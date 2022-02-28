@@ -56,7 +56,7 @@
 }
 
 .nav-logo:hover{
-  animation: shrink 1s 1 linear;
+  animation: shrink 1.2s 1 ease;
 }
 
 @keyframes shrink {

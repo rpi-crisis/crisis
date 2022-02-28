@@ -20,6 +20,7 @@
 .settings-icon:hover{
     filter: brightness(1.2);
     animation: rotation 2s infinite linear;
+    cursor: pointer;
 }
 
 @keyframes rotation {
