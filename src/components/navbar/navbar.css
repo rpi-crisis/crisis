@@ -15,7 +15,8 @@
 }
 
 .link-text{
-  padding: 5px 40px 10px 40px;
+  padding: 0.65vh  2.08vw 1.3vh 2.08vw;
+
 }
 
 .bar>.link-box{
@@ -50,7 +51,7 @@
   margin-left: 1em;
   display: flex;
   align-items: flex;
-  width: 1.7em;
+  width: 1.6em;
   height: width;
 }
 
