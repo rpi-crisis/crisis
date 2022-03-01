@@ -50,11 +50,11 @@
   margin-left: 1em;
   display: flex;
   align-items: flex;
-  height: 1.7em;
-  width: auto;
+  width: 1.7em;
+  height: width;
 }
 
 .nav-logo:hover{
   transition: 2s;
-  transform: scale(0.00001);
+  transform: scale(0);
 }

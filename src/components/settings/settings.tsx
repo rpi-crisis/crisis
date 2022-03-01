@@ -35,7 +35,8 @@ const Settings = () => {
           <div className="settings-exit" onClick={toggle_shown}/>
           
           <h3><u>Settings:</u></h3>
-          
+          <div>No settings as of now</div> 
+          <i>(Work In Progress)</i>
           
         </div>
       </div>
