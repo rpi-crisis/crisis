@@ -6,6 +6,11 @@ const Pages = (current: string) => {
       active:false
     },
     {
+      text:"Classes",
+      path:"/classes",
+      active:false
+    },
+    {
       text:"About",
       path:"/about",
       active:false

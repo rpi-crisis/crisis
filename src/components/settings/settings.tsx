@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { BiCog } from "react-icons/bi";
+import DarkModeButton from "./darkmode/darkmode";
 import "./settings.css";
 
 
@@ -35,8 +36,12 @@ const Settings = () => {
           <div className="settings-exit" onClick={toggle_shown}/>
           
           <h3><u>Settings:</u></h3>
+          
+          <DarkModeButton />
+          
           <div>No settings as of now</div> 
           <i>(Work In Progress)</i>
+         
           
         </div>
       </div>
