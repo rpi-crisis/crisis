@@ -31,7 +31,8 @@ const DarkModeButton = () => {
       </span>
       <label className="switch">
         <input type="checkbox"/>
-        <span className="slider"></span>
+        <span className="slider">
+        </span>
       </label>
     </div>
   );

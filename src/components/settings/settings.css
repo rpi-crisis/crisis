@@ -108,8 +108,7 @@
   display: flex;
   width: 90%;
   border-radius: 1em;
-  /*border: 2px;
-  border: solid var(--highlight-color);*/
+  margin: .5em;
 }
 
 .settings-item:hover{
