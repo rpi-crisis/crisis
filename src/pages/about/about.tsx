@@ -4,6 +4,7 @@ import NavBar from "../../components/navbar/navbar";
 import Pages from "../pageList";
 import discord from "../about/images/discord-logo.png";
 import github from "../about/images/github-logo.png";
+import youtube from "../about/images/youtube-logo.png";
 
 const AboutPage: FC = () => {
 
@@ -62,7 +63,7 @@ const AboutPage: FC = () => {
           <div className="footer-row">
              
             <div className="footer-col">
-              <h4>COPYRIGHT</h4>
+              <h4>COPYRIGHT ©</h4>
               <ul>
                 <li> <a href="#">LICENSE</a> </li>
                 <li> <a href="#">TERMS</a> </li>
@@ -73,27 +74,28 @@ const AboutPage: FC = () => {
             <div className="footer-col">
               <h4>MEMBERS</h4>
               <ul>
-                <li> JIAWEI WU </li>
-                <li> JIAWEI WU </li>
-                <li> JIAWEI WU </li>
-                <li> JIAWEI WU </li>
-                <li> JIAWEI WU </li>
-                <li> JIAWEI WU </li>
+                <li> <a href="#">JIAWEI WU</a> </li>
+                <li> <a href="#">JIAWEI WU</a> </li>
+                <li> <a href="#">JIAWEI WU</a> </li>
+                <li> <a href="#">JIAWEI WU</a> </li>
+                <li> <a href="#">JIAWEI WU</a> </li>
+                <li> <a href="#">JIAWEI WU</a> </li>
               </ul>
             </div>
 
             <div className="footer-col">
               <h4>C.R.I.S.I.S</h4>
-              <ul>
-                <li> <a href="#"><img src={discord} height={50} width={50}></img></a> </li>
-                <li> <a href="#"><img src={github} height={50} width={50}></img></a> </li>
-              </ul>
+              <div className="social-links">
+                <a href="#"><img src={discord} height={20} width={20}></img></a>
+                <a href="#"><img src={github} height={20} width={20}></img></a>
+                <a href="#"><img src={youtube} height={20} width={20}></img></a>
+              </div>
             </div>
 
           </div>
         </div>
       </footer>
-      
+
     </div>
 
   );
