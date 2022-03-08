@@ -3,7 +3,6 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import HomePage from "./pages/home/home";
 import AboutPage from "./pages/about/about";
 import ClassesPage from "./pages/classes/classes";
-//import TestSearch from "./pages/test-search";
 import init from "./scripts/data-fetch";
 
 function App() {
