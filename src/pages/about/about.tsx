@@ -69,9 +69,9 @@ const AboutPage: FC = () => {
           <div className="footer-row">
              
             <div className="footer-col">
-              <h4>COPYRIGHT ©</h4>
+              <h4>COPYRIGHT © 2021-2022 Crisis Team</h4>
               <ul>
-                <li> <a href="https://github.com/rpi-crisis/crisis/blob/main/LICENSE" target="_blank" rel="noreferrer noopener">LICENSING</a> </li>
+                <li> <a href="https://github.com/rpi-crisis/crisis/blob/main/LICENSE" target="_blank" rel="noreferrer noopener">LICENSE</a> </li>
               </ul>
             </div>
 
