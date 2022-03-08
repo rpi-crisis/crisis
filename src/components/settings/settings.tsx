@@ -38,11 +38,7 @@ const Settings = () => {
           <h3><u>Settings:</u></h3>
           
           <DarkModeButton />
-          
-          <div>No settings as of now</div> 
-          <i>(Work In Progress)</i>
-         
-          
+          <i>(Work In Progress)</i>        
         </div>
       </div>
     </div>

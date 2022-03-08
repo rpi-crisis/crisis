@@ -20,13 +20,16 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: linear-gradient(to bottom right, var(--nav-color), var(--bg-color));    -webkit-transition: .4s;
+    background-image: 
+        linear-gradient(to bottom right, 
+        var(--bg-color), var(--text-color));
+    -webkit-transition: .4s;
     transition: .4s;
     border-radius: 34px;
 }
 
 .slider:hover{
-    filter: brightness(1.5);
+    filter: brightness(1.6);
 }
 
 .slider:before {
@@ -37,14 +40,14 @@
     left: 7%;
     bottom: .18em;
     background-image: linear-gradient(to bottom right, grey, white);
+    filter: brightness(1.3);
     -webkit-transition: .4s;
     transition: .4s;
-
 }
 
-input:checked + .slider {
+/*input:checked + .slider {
     background-image: linear-gradient(to bottom right, yellow, red);
-}
+}*/
 
 input:focus + .slider {
     box-shadow: 0 0 1px rgba(100, 100, 100, .5);

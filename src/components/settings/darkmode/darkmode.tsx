@@ -1,36 +1,51 @@
-import React, {useState, useEffect} from "react";
+import React, { ChangeEventHandler } from "react";
 import "./darkmode.css";
 import "../settings.css";
 
 
+const setDark = () => {
+  localStorage.setItem("theme", "dark");
+  document.documentElement.setAttribute("data-theme", "dark");
+};
+const setLight = () => {
+  localStorage.setItem("theme", "light");
+  document.documentElement.setAttribute("data-theme", "light");
+};
+
+const storedTheme = localStorage.getItem("theme");
+
+const prefersLight = window.matchMedia && 
+      window.matchMedia("(prefers-color-scheme: light)").matches;
+
+const defaultLight = 
+      storedTheme === "light" || (storedTheme === null && prefersLight);
+
+if (defaultLight) {
+  setLight();
+}
+
+const toggleTheme: ChangeEventHandler<HTMLInputElement> = (e) => {
+  if (e.target.checked) {
+    setLight();
+  }
+  else {
+    setDark();
+  }
+};
+
 const DarkModeButton = () => {
-
-  const [display, update_display] = useState<boolean>(false);
-
-  const toggle_shown = () => {
-    update_display(!display);
-  };
-  
-  useEffect(() => {
-    /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-    const handleEsc = (event: any) => {
-      if (event.keyCode === 27){
-        update_display(false);
-      }
-    };
-    window.addEventListener("keydown", handleEsc);
-    return () => {
-      window.removeEventListener("keydown", handleEsc);
-    };
-  });
-
   return (
     <div className="settings-item">
       <span className="settings-item-title">
-        Dark Mode:
+        Dark/Light Mode:
       </span>
       <label className="switch">
-        <input type="checkbox"/>
+        <input 
+          type="checkbox"
+          id="checkbox"
+          onChange={toggleTheme}
+          defaultChecked={defaultLight}
+        />
         <span className="slider">
         </span>
       </label>
