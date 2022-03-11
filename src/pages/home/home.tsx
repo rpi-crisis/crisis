@@ -1,5 +1,4 @@
 import React, { FC, useState, useEffect } from "react";
-//import logo from '../../res/images/kool-aid_cat.png';
 import "./home.css";
 
 import { search } from "../../scripts/fuzzy-search";
@@ -40,7 +39,7 @@ const HomePage: FC = () => {
 
   const call_search = React.useCallback((value: string): void => {
     searchQuery(value);
-  }, []);
+  }, [courses]);
 
   useEffect(() => {  
     const timeOutId = setTimeout(() => call_search(searchbar_content),200);

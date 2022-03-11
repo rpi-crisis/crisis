@@ -20,5 +20,4 @@ function App() {
     </Router>
   );
 }
-//<Route path="/search" component={TestSearch} />
 export default App;

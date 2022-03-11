@@ -21,3 +21,34 @@ export type Transfer = {
     school: string,
     title: string
 };
+
+export type NewCourse = {
+    title: string,
+    department: string,
+    id: string,
+    credits: string,
+    ci: boolean,
+    description: string,
+    offered: string,
+    prereq: string,
+    coreq: string,
+    cross: string,
+    sections: Array<Section>
+}
+
+export type Section = {
+    crn: string,
+    section: string,
+    capacity: number,
+    enrolled: number,
+    remaining: number,
+    meetings: Array<Meeting>
+}
+
+export type Meeting = {
+    time: string,
+    days: string,
+    location: string,
+    type: string,
+    instructors: string
+};
