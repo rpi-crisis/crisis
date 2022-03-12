@@ -1,15 +1,13 @@
 import React, { FC, useState, useEffect } from "react";
 import "./home.css";
 
-import { getJsonData } from "../../scripts/data-fetch";
 import { search } from "../../scripts/fuzzy-search";
 
 import NavBar from "../../components/navbar/navbar";
 import SearchBar from "../../components/search/search";
 import Pages from "../pageList";
 import Class from "../../components/class/class";
-import { useAppDispatch, useAppSelector } from "../../store";
-import { EMPTY_COURSES, FETCH_COURSES, ADD_COURSE } from "../../store/slices/courseSlice";
+import { useAppSelector } from "../../store";
 
 interface InputState {
   /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
@@ -17,34 +15,11 @@ interface InputState {
   time: number;
 }
 
-/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-let courses_json: any[] = [];
-
-getJsonData()
-  .then(res => {
-    courses_json = res;
-  }
-  );
+//let searched: boolean = false //TODO make it say loading before search completed
 
 const HomePage: FC = () => {
 
-  const courseState = useAppSelector(state => state.courses.courses);
-  const hasError = useAppSelector(state => state.courses.hasError);
-  const dispatch = useAppDispatch();
-  
-  console.log(courseState);
-  
-  const addCourses = () => {
-    dispatch(ADD_COURSE({name: "data structures"}));
-  };
-
-  const clearCourses = () => {
-    dispatch(EMPTY_COURSES());
-  };
-
-  const fetchCourses = () => {
-    dispatch(FETCH_COURSES());
-  };
+  const { courses, hasError } = useAppSelector(state => state.courses);
 
   const [state, setState] = useState<InputState>({results:[], time:0});
 
@@ -56,7 +31,7 @@ const HomePage: FC = () => {
       return;
     }
     const before = performance.now();
-    const results = search(query, courses_json, ["id", "title", "description"]).slice(0,5);
+    const results = search(query, Object.values(courses), ["id", "title", "description"]).slice(0,5);
     const after = performance.now();
     console.log(results);
     setState({results: results, time: Math.round(after - before)});
@@ -64,7 +39,7 @@ const HomePage: FC = () => {
 
   const call_search = React.useCallback((value: string): void => {
     searchQuery(value);
-  }, []);
+  }, [courses]);
 
   useEffect(() => {  
     const timeOutId = setTimeout(() => call_search(searchbar_content),200);
@@ -81,12 +56,6 @@ const HomePage: FC = () => {
         {hasError && (
           <h2>THERES AN ERROR!!!!</h2>
         )}
-        <button onClick={addCourses}>add course</button>
-        <button onClick={clearCourses}>clear courses</button>
-        <button onClick={fetchCourses}>fetch courses</button>
-        {Object.entries(courseState).map(entry => (
-          <p key={entry[1].name}>{entry[1].name}</p>
-        ))}
         {state.results.map((el,pos) => {return <Class key={pos} data={el}/>;})}
       </header>
     </div>

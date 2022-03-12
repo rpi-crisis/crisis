@@ -2,10 +2,10 @@ import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import localforage from "localforage";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from "redux-persist";
-import courseSlice from "./slices/courseSlice";
+import courses from "./slices/courses";
 
 const rootReducer = combineReducers({
-  courses: courseSlice
+  courses: courses
 });
 
 const config = {
