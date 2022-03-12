@@ -1,5 +1,4 @@
 import React, { FC, useState, useEffect } from "react";
-//import logo from '../../res/images/kool-aid_cat.png';
 import "./home.css";
 
 import { getJsonData } from "../../scripts/data-fetch";
@@ -20,7 +19,6 @@ interface InputState {
 
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
 let courses_json: any[] = [];
-//let searched: boolean = false //TODO make it say loading before search completed
 
 getJsonData()
   .then(res => {
