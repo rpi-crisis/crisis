@@ -13,8 +13,6 @@ localStorage has a limit of 5MB. [IndexedDB](https://developer.mozilla.org/en-US
 is another alternative, but frankly it is overkill for something that currently has no plans of becoming a progressive web app.
 
 ### Usage
-See `src/scripts/data-fetch.ts` for a practical example of how this can be used to cache a file and its version.
-
 Using [localForage](https://github.com/localForage/localForage) is very similar to localStorage. The only difference is that it is a promise-based API.
 Since it is an external library however, we do need to fist install it using npm.
 
