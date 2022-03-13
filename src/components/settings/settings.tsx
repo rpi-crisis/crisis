@@ -26,7 +26,7 @@ const Settings: FC = () => {
  
   return (
     <div>
-      <span  onClick={toggle_shown}>
+      <span onClick={toggle_shown}>
         <BiCog className="settings-icon"/>
       </span>
 

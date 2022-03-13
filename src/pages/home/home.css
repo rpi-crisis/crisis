@@ -1,8 +1,8 @@
 @import "../../theme.css";
 
 .App-logo {
-  height: 20vmin;
-  margin-top: clamp(10px, 15vmin, 20px);
+  height: 16vmin !important;
+  margin-top: 3vmin !important;
   pointer-events: none;
 }
 

@@ -6,17 +6,23 @@
 
 .settings-icon{
   border: none;
-  padding: none;
-  margin: 2px;
-  float: inline-end;
-  margin-left: auto;
-  margin-right: 1em;
+  margin: 8% 1em 2px auto;
   display: flex;
-  align-items: flex;
   justify-content: center;
   transition: filter 300ms;
   height: 80%;
   width: auto;
+}
+
+.dummy-settings-icon{
+    opacity: 0;
+    border: none;
+    margin: 8% 1em 2px auto;
+    display: flex;
+    justify-content: center;
+    transition: filter 300ms;
+    height: 80%;
+    width: auto;
 }
 
 .settings-icon:hover{
@@ -113,7 +119,7 @@
 
 .settings-item:hover{
   background-color: rgba(0, 0, 0, .05);
-  box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.1);   
+  box-shadow: 0 0 0 8px rgba(0,0,0,0.1);
 }
 
 .settings-item-title{
