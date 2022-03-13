@@ -1,6 +1,6 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { RootState } from "..";
-import { Course } from "../../types";
+import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
+import {RootState} from "..";
+import {Course} from "../../types";
 
 const BASE_URL = "https://raw.githubusercontent.com/rpi-crisis/data";
 
@@ -45,8 +45,7 @@ export const FETCH_COURSES = createAsyncThunk(
   "courses/fetchCourses",
   async () => {
     const res = await fetch(`${BASE_URL}/main/model_data.json`);
-    const courses = await res.json() as Course[];
-    return courses;
+    return await res.json() as Course[];
   }
 );
 

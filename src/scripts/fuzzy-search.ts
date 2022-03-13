@@ -1,29 +1,43 @@
 import Fuse from "fuse.js";
+import {Course} from "../types";
 
-/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-function search(query: string, json: any, keys: string[]): any[] {
-  if (!json) return [];
+const course_keys = ["id", "title"];
 
-  const options = {
-    // isCaseSensitive: false,
-    // includeScore: false,
-    shouldSort: true,
-    // includeMatches: false,
-    // findAllMatches: false,
-    // minMatchCharLength: 1,
-    // location: 0,
-    threshold: 0.8,
-    // distance: 100,
-    // useExtendedSearch: false,
-    // ignoreLocation: false,
-    // ignoreFieldNorm: false,
-    keys: keys
-  };
+const course_options = {
+  // isCaseSensitive: false,
+  // includeScore: false,
+  shouldSort: true,
+  // includeMatches: false,
+  // findAllMatches: false,
+  // minMatchCharLength: 1,
+  // location: 0,
+  threshold: 0.7,
+  distance: 6,
+  // useExtendedSearch: false,
+  // ignoreLocation: false,
+  // ignoreFieldNorm: false,
+  keys: course_keys
+};
 
-  const fuse = new Fuse(json, options);
-  const result = fuse.search(query);
-  return result.slice(0, 10).map(x => x.item);
+class CourseSearcher {
+  private fuse: Fuse<Course>;
+  private courses: Course[];
 
+  constructor(courses: Course[] = []) {
+    this.courses = courses;
+    this.fuse = new Fuse<Course>(this.courses, course_options);
+  }
+
+  public update(courses: Course[]) {
+    if(this.courses != courses){
+      this.courses = courses;
+      this.fuse.setCollection(courses);
+    }
+  }
+
+  public search(query: string): Course[] {
+    return this.fuse.search(query).slice(0, 10).map(result => result.item);
+  }
 }
 
-export { search };
+export { CourseSearcher };
