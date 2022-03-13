@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import Settings from "../settings/settings";
-import Logo from "../../res/images/kool-aid_cat.png";
 
 type page = {
     text: string,
@@ -49,7 +48,6 @@ const NavBar: FC<{pages: page[]}> = ({pages}) => {
 
   return (
     <div className="overarching-bar bar">
-      <img src={Logo} className="nav-logo"></img>
       <div className="bar">
         {pages.map((el,pos) => (
           <div className="link-box"

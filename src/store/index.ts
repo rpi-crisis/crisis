@@ -3,9 +3,11 @@ import localforage from "localforage";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from "redux-persist";
 import courses from "./slices/courses";
+import settings from "./slices/settings";
 
 const rootReducer = combineReducers({
-  courses: courses
+  courses: courses,
+  settings: settings
 });
 
 const config = {

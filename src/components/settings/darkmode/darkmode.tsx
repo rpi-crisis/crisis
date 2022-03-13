@@ -1,50 +1,37 @@
-import React, { ChangeEventHandler } from "react";
+import React, { ChangeEventHandler, FC } from "react";
+
+import { useAppDispatch, useAppSelector } from "../../../store";
+import { SET_THEME } from "../../../store/slices/settings";
+
+
 import "./darkmode.css";
 import "../settings.css";
+const DarkModeButton: FC = () => {
+  const dispatch = useAppDispatch();
 
+  const setTheme = (theme: string) => {
+    dispatch({ type: SET_THEME, payload: theme});
+    document.documentElement.setAttribute("data-theme", theme);
+  };
 
-const setDark = () => {
-  localStorage.setItem("theme", "dark");
-  document.documentElement.setAttribute("data-theme", "dark");
-};
-const setLight = () => {
-  localStorage.setItem("theme", "light");
-  document.documentElement.setAttribute("data-theme", "light");
-};
+  const settings = useAppSelector(state => state.settings);
+  setTheme(settings.theme);
 
-const storedTheme = localStorage.getItem("theme");
+  const toggleTheme: ChangeEventHandler<HTMLInputElement> = () => {
+    setTheme(settings.theme === "light" ? "dark" : "light");
+  };
 
-const prefersLight = window.matchMedia && 
-      window.matchMedia("(prefers-color-scheme: light)").matches;
-
-const defaultLight = 
-      storedTheme === "light" || (storedTheme === null && prefersLight);
-
-if (defaultLight) {
-  setLight();
-}
-
-const toggleTheme: ChangeEventHandler<HTMLInputElement> = (e) => {
-  if (e.target.checked) {
-    setLight();
-  }
-  else {
-    setDark();
-  }
-};
-
-const DarkModeButton = () => {
   return (
     <div className="settings-item">
       <span className="settings-item-title">
-        Dark/Light Mode:
+        Toggle Dark Mode:
       </span>
       <label className="switch">
         <input 
           type="checkbox"
           id="checkbox"
           onChange={toggleTheme}
-          defaultChecked={defaultLight}
+          defaultChecked={settings.theme !== "light"}
         />
         <span className="slider">
         </span>
