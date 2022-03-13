@@ -1,8 +1,8 @@
 @import "../../theme.css";
 
 .App-logo {
-  height: 16vmin !important;
-  margin-top: 3vmin !important;
+  height: 20vmin;
+  margin-top: clamp(10px, 15vmin, 200px);
   pointer-events: none;
 }
 
@@ -19,17 +19,4 @@
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: var(--header-color);
-}
-
-.home-text{
-  max-width: 960px;
-  color: var(--text-color)
-}
-
-.card-container {
-  display: flex;
-  max-width: 100%;
-  min-width: 50%;
-  justify-content: space-between;
-  align-items: center;
 }

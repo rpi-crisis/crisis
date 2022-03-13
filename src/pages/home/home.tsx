@@ -5,7 +5,7 @@ import Pages from "../pageList";
 import Class from "../../components/class/class";
 import { CourseSearcher } from "../../scripts/fuzzy-search";
 import { useAppSelector } from "../../store";
-import {Course} from "../../types";
+import { Course } from "../../types";
 
 import "./home.css";
 import logo from "../../res/images/crisis-logo-trimmed-1.png";

@@ -15,7 +15,8 @@
 }
 
 .link-text{
-  padding: 5px 40px 10px 40px;
+  padding: 0.65vh  2.08vw 1.3vh 2.08vw;
+
 }
 
 .bar>.link-box{
@@ -36,4 +37,8 @@
 .link {
   color: inherit;
   text-decoration: none;
+}
+
+.overarching-bar{
+  justify-content: space-evenly;
 }
