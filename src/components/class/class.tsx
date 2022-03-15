@@ -1,4 +1,5 @@
 import React, { FC, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./class.css";
 
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
@@ -32,7 +33,7 @@ const Class: FC<{data: any}> = ({data}) => {
         <div className="detailed">
           <div className="exit" onClick={toggle_shown}/>
           <div id="class-header">
-            <div>{data.title}</div>
+            <Link to={"class/" + data.department + data.id_num}>{data.title}</Link>
             <div>{data.id}</div>
             <div>Credits: {data.credits}</div>
           </div>
