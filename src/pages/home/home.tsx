@@ -57,7 +57,6 @@ const HomePage: FC = () => {
     <div className="App">
       <header className="App-header">
         <NavBar pages={Pages("Home")}/>
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <h3>CRISIS - Correcting Rensselaer{"'"}s Insufferable SIS</h3>
         <SearchBar content_update={content_update}/>
         {state.results.map((el,pos) => {return <Class key={pos} data={el}/>;})}
