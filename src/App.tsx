@@ -3,12 +3,18 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import HomePage from "./pages/home/home";
 import AboutPage from "./pages/about/about";
 import ClassesPage from "./pages/classes/classes";
-import { useAppDispatch } from "./store";
+import {useAppDispatch, useAppSelector} from "./store";
 import { CHECK_VERSION } from "./store/slices/courses";
 
 function App() {
   const dispatch = useAppDispatch();
   dispatch(CHECK_VERSION());
+
+  const settings = useAppSelector(state => state.settings);
+
+  if(document.documentElement.getAttribute("data-theme") as string !== settings.theme) {
+    document.documentElement.setAttribute("data-theme", settings.theme);
+  }
 
   return (
     <Router>

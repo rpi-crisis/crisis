@@ -56,8 +56,8 @@ const NavBar: FC<{pages: page[]}> = ({pages}) => {
         {pages.map((el,pos) => (
           <div className="link-box"
             style={el.active ?
-              {background :"var(--text-color)",color:"var(--bg-color)"} :
-              {background :"var(--nav-color)",color:"var(--text-color)"}
+              {background: "var(--text-color)", color: "var(--bg-color)"} :
+              {background: "var(--nav-color)", color: "var(--text-color)"}
             }
             key={pos}
           >

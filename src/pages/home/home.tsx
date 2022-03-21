@@ -32,11 +32,8 @@ const HomePage: FC = () => {
     }
 
     searcher.update(Object.values(courses));
-
-    window.requestIdleCallback(() => {
-      const results = searcher.search(query);
-      setState({results: results.splice(0, 5)});
-    });
+    const results = searcher.search(query);
+    setState({results: results.splice(0, 5)});
   };
 
   const call_search = useCallback((value: string): void => {
