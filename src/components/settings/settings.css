@@ -1,0 +1,130 @@
+@import "../../theme.css";
+
+:root{
+    --popup-speed: 500ms;
+}
+
+.settings-icon{
+  border: none;
+  margin: 8% 1em 2px auto;
+  display: flex;
+  justify-content: center;
+  transition: filter 300ms;
+  height: 80%;
+  width: auto;
+}
+
+.dummy-settings-icon{
+    opacity: 0;
+    border: none;
+    margin: 8% 1em 2px auto;
+    display: flex;
+    justify-content: center;
+    transition: filter 300ms;
+    height: 80%;
+    width: auto;
+}
+
+.settings-icon:hover{
+    filter: brightness(1.2);
+    animation: rotation 2s infinite linear;
+    cursor: pointer;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+.settings-cover {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  background: #000D;
+  justify-content: center;
+  align-items: center;
+}
+
+.settings-detailed {
+  position: relative;
+  top: 40vh;
+  width: 50vw;
+  height: 60vh;
+  background-color: var(--bg-color);
+  border: solid var(--text-color);
+  border-radius: 1em;
+  z-index: 2;
+  overflow: auto;
+  padding: 0.5em;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.settings-wrapper {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+}
+
+
+.settings-exit {
+  position: absolute;
+  right: 0.5em;
+  top: 0.5em;
+  width: 1em;
+  aspect-ratio: 1;
+  transition: 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.settings-exit::before, .settings-exit::after{
+ background-color: var(--text-color);
+ content: "";
+ display: inline-block;
+ width:  1em;
+ height: 0.3em;
+ border-radius: 0.1em;
+ position: absolute;
+}
+  
+.settings-exit::before{
+  transform: rotate(-45deg);
+}
+.settings-exit::after{
+  transform: rotate(45deg);
+}
+
+.settings-exit:hover {
+  transform: scale(1.2);
+  --icon-color: var(--highlight-color);
+}
+
+.settings-item{
+  display: flex;
+  width: 90%;
+  border-radius: 1em;
+  margin: .5em;
+}
+
+.settings-item:hover{
+  background-color: rgba(0, 0, 0, .05);
+  box-shadow: 0 0 0 8px rgba(0,0,0,0.1);
+}
+
+.settings-item-title{
+  justify-content: left;
+  margin-left: .5em;
+  margin-right: auto;
+  vertical-align: middle;
+}

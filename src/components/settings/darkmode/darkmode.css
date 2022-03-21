@@ -1,0 +1,64 @@
+@import "../../../theme.css";
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 8.7%;
+    height: 100%;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        linear-gradient(to bottom right, 
+        var(--text-color), var(--text-color));
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:hover{
+    filter: brightness(1.15);
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 76%;
+    width: 44%;
+    left: 7%;
+    bottom: .18em;
+    background-image: linear-gradient(to bottom right, gray, darkgray);
+    filter: brightness(1.3);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+/*input:checked + .slider {
+    background-image: linear-gradient(to bottom right, yellow, red);
+}*/
+
+input:focus + .slider {
+    box-shadow: 0 0 1px rgba(100, 100, 100, .5);
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+}
+
+.slider:before {
+    border-radius: 50%;
+}

@@ -6,7 +6,6 @@ import discord from "../about/images/discord-logo.png";
 import github from "../about/images/github-logo.png";
 
 const AboutPage: FC = () => {
-
   return (
     <div className="App">
       <header className="info-header">
