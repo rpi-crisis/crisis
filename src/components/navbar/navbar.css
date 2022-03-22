@@ -42,20 +42,3 @@
 .overarching-bar{
   justify-content: space-evenly;
 }
-
-.nav-logo{
-  border: none;
-  padding: none;
-  float: inline-end;
-  margin-right: auto;
-  margin-left: 1em;
-  display: flex;
-  align-items: flex;
-  width: 1.6em;
-  height: width;
-}
-
-.nav-logo:hover{
-  transition: 2s;
-  transform: scale(0);
-}

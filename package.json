@@ -1,6 +1,6 @@
 {
   "name": "crisis",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "license": "AGPL-3.0",
   "private": false,
   "homepage": "https://rpicrisis.org/",
@@ -19,15 +19,19 @@
     }
   ],
   "dependencies": {
+    "@reduxjs/toolkit": "^1.7.2",
     "@types/react": "^17.0.34",
     "@types/react-dom": "^17.0.11",
-    "fuse.js": "^6.4.6",
+    "@types/react-redux": "^7.1.22",
+    "fuse.js": "^6.5.3",
     "localforage": "^1.10.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
+    "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
     "react-scripts": "^5.0.0",
+    "redux-persist": "^6.0.0",
     "typescript": "^4.4.4",
     "web-vitals": "^1.1.2"
   },

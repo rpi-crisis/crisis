@@ -1,15 +1,9 @@
 @import "../../theme.css";
 
 .App-logo {
-  height: 20vmin;
-  margin-top: clamp(10px, 15vmin, 200px);
+  height: 16vmin !important;
+  margin-top: 3vmin !important;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 5s linear;
-  }
 }
 
 .App {
@@ -38,13 +32,4 @@
   min-width: 50%;
   justify-content: space-between;
   align-items: center;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

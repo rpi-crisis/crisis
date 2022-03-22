@@ -1,63 +1,59 @@
-import React, { FC, useState, useEffect } from "react";
-//import logo from '../../res/images/kool-aid_cat.png';
-import "./home.css";
-
-import { getJsonData } from "../../scripts/data-fetch";
-import { search } from "../../scripts/fuzzy-search";
-
+import React, { FC, useState, useEffect, useCallback } from "react";
 import NavBar from "../../components/navbar/navbar";
 import SearchBar from "../../components/search/search";
 import Pages from "../pageList";
 import Class from "../../components/class/class";
+import { CourseSearcher } from "../../scripts/fuzzy-search";
+import { useAppSelector } from "../../store";
+import { Course } from "../../types";
+
+import "./home.css";
+import logo from "../../res/images/crisis-logo-trimmed-1.png";
+
 
 interface InputState {
-  /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-  results: any[];
-  time: number;
+  results: Course[];
 }
 
-/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-let courses_json: any[] = [];
-//let searched: boolean = false //TODO make it say loading before search completed
-
-getJsonData()
-  .then(res => {
-    courses_json = res;
-  }
-  );
+const searcher = new CourseSearcher();
 
 const HomePage: FC = () => {
 
-  const [state, setState] = useState<InputState>({results:[], time:0});
+  const { courses } = useAppSelector(state => state.courses);
+
+  const [state, setState] = useState<InputState>({results: []});
 
   const [searchbar_content, content_update] = useState<string>("");
 
   const searchQuery = (query: string): void => {
     if(query === "") {
-      setState({results: [], time: 0});
+      setState({results: []});
       return;
     }
-    const before = performance.now();
-    const results = search(query, courses_json, ["id", "title", "description"]).slice(0,5);
-    const after = performance.now();
-    console.log(results);
-    setState({results: results, time: Math.round(after - before)});
+
+    searcher.update(Object.values(courses));
+
+    window.requestIdleCallback(() => {
+      const results = searcher.search(query);
+      setState({results: results.splice(0, 5)});
+    });
   };
 
-  const call_search = React.useCallback((value: string): void => {
+  const call_search = useCallback((value: string): void => {
     searchQuery(value);
-  }, []);
+  }, [courses]);
 
   useEffect(() => {  
     const timeOutId = setTimeout(() => call_search(searchbar_content),200);
     return () => clearTimeout(timeOutId);
-  },[searchbar_content,call_search]);
+  },[searchbar_content, call_search]);
 
   return (
     <div className="App">
       <header className="App-header">
         <NavBar pages={Pages("Home")}/>
-        <h3>CRISIS - Correcting Rensselaer{"'"}s Insufferable SIS</h3>
+        {<img src={logo} className="App-logo" alt="logo" />}
+        <h3>Correcting Rensselaer{"'"}s Insufferable SIS</h3>
         <SearchBar content_update={content_update}/>
         {state.results.map((el,pos) => {return <Class key={pos} data={el}/>;})}
       </header>

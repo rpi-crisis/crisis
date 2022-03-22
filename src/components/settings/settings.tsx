@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, FC} from "react";
 import { BiCog } from "react-icons/bi";
 import DarkModeButton from "./darkmode/darkmode";
 import "./settings.css";
 
 
-const Settings = () => {
+const Settings: FC = () => {
   const [display, update_display] = useState<boolean>(false);
 
   const toggle_shown = () => {
@@ -26,7 +26,7 @@ const Settings = () => {
  
   return (
     <div>
-      <span  onClick={toggle_shown}>
+      <span onClick={toggle_shown}>
         <BiCog className="settings-icon"/>
       </span>
 
