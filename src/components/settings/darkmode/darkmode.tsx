@@ -14,6 +14,7 @@ const DarkModeButton: FC = () => {
   const setTheme = (theme: string) => {
     dispatch(SET_THEME(theme));
     document.documentElement.setAttribute("data-theme", theme);
+
   };
 
   const toggleTheme: ChangeEventHandler<HTMLInputElement> = () => {

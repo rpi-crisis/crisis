@@ -1,4 +1,4 @@
-import React, {ChangeEvent, FC} from "react";
+import React, { ChangeEvent, FC } from "react";
 import "./search.css";
 
 const SearchBar: FC<{content_update: (content: string)=> void}> = ({content_update}) => {

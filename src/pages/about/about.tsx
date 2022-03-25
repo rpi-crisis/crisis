@@ -2,10 +2,11 @@ import React, { FC } from "react";
 import "./about.css";
 import NavBar from "../../components/navbar/navbar";
 import Pages from "../pageList";
-import discord from "../about/images/discord-logo.png";
-import github from "../about/images/github-logo.png";
+import { SiDiscord, SiGithub } from "react-icons/si";
+import packagejson from "../../../package.json";
 
 const AboutPage: FC = () => {
+
   return (
     <div className="App">
       <header className="info-header">
@@ -61,28 +62,26 @@ const AboutPage: FC = () => {
           </div>
         </div>
       </header>
-      
 
       <footer className="info-footer">
         <div className="footer-container">
           <div className="footer-row">
-             
             <div className="footer-col">
-              <h4>COPYRIGHT © 2021-2022 Crisis Team</h4>
+              <h4>COPYRIGHT © 2021-2022 CRISIS Team</h4>
               <ul>
                 <li> <a href="https://github.com/rpi-crisis/crisis/blob/main/LICENSE" target="_blank" rel="noreferrer noopener">LICENSE</a> </li>
               </ul>
             </div>
 
             <div className="footer-col">
-              <h4>FOUNDER</h4>
+              <h4>FOUNDERS</h4>
               <ul>
                 <li> <a href="https://github.com/TrevorBrunette" target="_blank" rel="noreferrer noopener">TREVOR BRUNETTE</a> </li>
                 <li> <a href="https://github.com/cxider" target="_blank" rel="noreferrer noopener">COLIN MELVILLE</a> </li>
               </ul>
             </div>
 
-            <div className="footer-col">
+            {/*<div className="footer-col">
               <h4>MEMBERS</h4>
               <ul>
                 <li> <a href="https://github.com/Ardennt" target="_blank" rel="noreferrer noopener">JIAWEI WU</a> </li>
@@ -91,13 +90,13 @@ const AboutPage: FC = () => {
                 <li> <a href="https://github.com/nazime1" target="_blank" rel="noreferrer noopener">ERICA NAZIMOWITZ</a> </li>
                 <li> <a href="https://github.com/Al3afifi" target="_blank" rel="noreferrer noopener">MUHAMMAD ALAFIFI</a> </li>
               </ul>
-            </div>
+            </div>*/}
 
             <div className="footer-col">
-              <h4>C.R.I.S.I.S</h4>
+              <h4>CRISIS {packagejson.version}</h4>
               <div className="social-links">
-                <a href="https://discord.gg/7V2qHY9zP7" target="_blank" rel="noreferrer noopener"><img src={discord} height={20} width={20}></img></a>
-                <a href="https://github.com/rpi-crisis/crisis" target="_blank" rel="noreferrer noopener"><img src={github} height={20} width={20}></img></a>
+                <a href="https://discord.gg/7V2qHY9zP7" target="_blank" rel="noreferrer noopener"><SiDiscord color={"black"} /></a>
+                <a href="https://github.com/rpi-crisis/crisis" target="_blank" rel="noreferrer noopener"><SiGithub color={"black"} /></a>
               </div>
             </div>
 

@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import Settings from "../settings/settings";
-import {BiCog} from "react-icons/bi";
+import { BiCog } from "react-icons/bi";
 
 type page = {
     text: string,
