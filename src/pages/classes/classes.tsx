@@ -34,5 +34,5 @@ const ClassesPage: FC = () => {
       </div>
     );
   }
-}
+};
 export default ClassesPage;
