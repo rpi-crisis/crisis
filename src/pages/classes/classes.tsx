@@ -7,7 +7,7 @@ import NavBar from "../../components/navbar/navbar";
 // import SearchBar from "../../components/search/search";
 import Pages from "../pageList";
 // import Class from "../../components/class/class";
-// import {Course} from "../../types";
+// import { Course } from "../../types";
 
 // interface InputState {
 //   results: Course[];

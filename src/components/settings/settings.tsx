@@ -1,4 +1,4 @@
-import React, {useState, useEffect, FC} from "react";
+import React, { useState, useEffect, FC } from "react";
 import { BiCog } from "react-icons/bi";
 import DarkModeButton from "./darkmode/darkmode";
 import "./settings.css";
