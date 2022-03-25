@@ -1,6 +1,14 @@
-# CRISIS: Correcting Rensselaer's Insufferable SIS  
+# CRISIS - Correcting Rensselaer's Insufferable SIS  
 
-## This site is deployed at [rpicrisis.org](https://rpicrisis.org/)
+[![rpi-crisis - crisis](https://img.shields.io/static/v1?label=rpi-crisis&message=crisis&color=blue&logo=github)](https://github.com/rpi-crisis/crisis "Go to GitHub repo")
+[![stars - crisis](https://img.shields.io/github/stars/rpi-crisis/crisis?style=social)](https://github.com/rpi-crisis/crisis)
+
+[![Made with TypeScript](https://img.shields.io/badge/TypeScript-4-blue?logo=typescript&logoColor=white)](https://typescriptlang.org "Go to TypeScript homepage")
+[![Made with React](https://img.shields.io/badge/React-17-blue?logo=react&logoColor=white)](https://reactjs.org "Go to React homepage")
+[![dependency - Redux](https://img.shields.io/badge/dependency-Redux-blue?logo=redux&logoColor=white)](https://www.npmjs.com/package/Redux)
+[![License](https://img.shields.io/badge/License-AGPL--3.0-blue)](/LICENSE)
+
+## This project is deployed at [rpicrisis.org](https://rpicrisis.org/)
 
 CRISIS is an open source RCOS project: a website that houses various course and major related tools for my college, Rensselaer Polytechnic Institute, since we believe that the offered tools are insufficient.  
 From the highest priority to lowest this would include:  
@@ -44,6 +52,6 @@ Pull requests should be relatively infrequent in general, but since the project 
 
 
 
-### Licensing
-CRISIS is licensed under the GNU Affero General Public License v3.0  
+### License
+CRISIS is licensed under the [GNU Affero General Public License v3.0](/LICENSE) by [@rpi-crisis](https://github.com/rpi-crisis).\
 For more information on licensing and copyright information, see the [LICENSE](https://github.com/rpi-crisis/crisis/blob/main/LICENSE)
