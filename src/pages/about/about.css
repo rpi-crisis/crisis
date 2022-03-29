@@ -1,4 +1,5 @@
 @import "../../theme.css";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 .info-header {
   background-color: var(--bg-color);
@@ -8,9 +9,134 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: var(--header-color);
+  overflow-x: hidden;
 }
 
 .about-text{
-    max-width: 960px;
-    color: var(--text-color)
+  color: var(--text-color);
+  font-family: 'Open Sans', sans-serif;
+  font-size: smaller;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.about-text2{
+  color: var(--text-color);
+  font-family: 'Open Sans', sans-serif;
+  font-size: smaller;
+}
+
+.sub-header{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bolder;
+  margin-bottom: 0px;
+}
+
+.little-header{
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+.boxes{
+  justify-content: space-around;
+  flex-wrap: wrap;
+  display: flex;
+  width: auto;
+  margin: 0 auto;
+}
+
+.box{
+  float: left;
+  width: 450px;
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.bolder-color{
+  font-weight: 900;
+  color: #B37A4c;
+}
+
+.info-footer{
+  display: flex;
+  background-color: rgba(255, 174, 66);
+  justify-content: space-around;
+  margin: 0px;
+  padding-left: 5%;
+  box-sizing: border-box;
+  padding: 20px 0px 20px;
+  overflow-x: hidden;
+}
+
+.footer-row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-col{
+  padding: 0 50px;
+}
+
+.footer-col h4{
+  font-size: 18px;
+  color: purple;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 800;
+  position: relative;
+}
+
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left: 50;
+  bottom: -10px;
+  background-color: grey;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 600;
+  display: block;
+  color: #a04e5d;
+}
+
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a:hover{
+  color: #966fd6;
+}
+
+.footer-col .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: #966fd6;
+  margin: 0px 10px 10px 0px;
+  justify-content: center;
+  line-height: 45px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+  background-color: white;
+}
+
+.footer-container{
+  margin: auto;
 }

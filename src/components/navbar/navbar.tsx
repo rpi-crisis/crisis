@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import "./navbar.css";
 import Settings from "../settings/settings";
-import {BiCog} from "react-icons/bi";
+import { BiCog } from "react-icons/bi";
 
 type page = {
     text: string,
@@ -56,8 +56,8 @@ const NavBar: FC<{pages: page[]}> = ({pages}) => {
         {pages.map((el,pos) => (
           <div className="link-box"
             style={el.active ?
-              {background :"var(--text-color)",color:"var(--bg-color)"} :
-              {background :"var(--nav-color)",color:"var(--text-color)"}
+              {background: "var(--text-color)", color: "var(--bg-color)"} :
+              {background: "var(--nav-color)", color: "var(--text-color)"}
             }
             key={pos}
           >

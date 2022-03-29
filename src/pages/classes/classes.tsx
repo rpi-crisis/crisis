@@ -1,17 +1,24 @@
 import React, { FC /*,  useState, useEffect */ } from "react";
 import "./classes.css";
 
-// import { CourseSearcher } from "../../scripts/fuzzy-search";
-
 import NavBar from "../../components/navbar/navbar";
-// import SearchBar from "../../components/search/search";
 import Pages from "../pageList";
+import { CourseSearcher } from "../../scripts/fuzzy-search";
+import { useAppSelector } from "../../store";
+import { Course } from "../../types";
+
+interface InputState {
+  results: Course;
+}
 
 const ClassesPage: FC = () => {
 
   const pathname = window.location.pathname;
   const classCode = pathname.substring(7);
-  
+  const classDept = classCode.substring(0,4);
+  const classNum = classCode.substring(4);
+
+
   if(classCode.length != 8){
     return (
       <div className="App">
@@ -28,7 +35,7 @@ const ClassesPage: FC = () => {
       <div className="App">
         <header className="App-header">
           <NavBar pages={Pages("Classes")}/>
-          <h3>{classCode}</h3>
+          <h3>{classDept}-{classNum}</h3>
           WIP
         </header>
       </div>

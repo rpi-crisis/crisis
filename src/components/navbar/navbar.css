@@ -1,7 +1,7 @@
 @import "../../theme.css";
 
 .bar {
-  transition: 0.2s;
+  transition: 0.1s;
   background: var(--nav-color);
   color: var(--text-color);
 
@@ -16,7 +16,6 @@
 
 .link-text{
   padding: 0.65vh  2.08vw 1.3vh 2.08vw;
-
 }
 
 .bar>.link-box{

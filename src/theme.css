@@ -1,19 +1,19 @@
 :root {
-  --nav-color: #392F5A;
-  --bg-color: #1A1528;
-  --text-color: #F4D06F;
-  --accent-color: #FF8811;
-  --highlight-color: #4DCCBD;
-  --header-color: #FFF8F0;
-}
-
-[data-theme="light"] {
   --nav-color: #e2e2e2;
   --bg-color: #FFFFFF;
   --text-color: #767676;
   --accent-color: grey;
   --highlight-color: #383838;
   --header-color: #000000;
+}
+
+[data-theme="dark"] {
+  --nav-color: #392F5A;
+  --bg-color: #1A1528;
+  --text-color: #F4D06F;
+  --accent-color: #FF8811;
+  --highlight-color: #4DCCBD;
+  --header-color: #FFF8F0;
 }
 
 /* scrapped idea for light theme, let's leave it here for now as we may come back to it
