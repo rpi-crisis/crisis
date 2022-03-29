@@ -24,7 +24,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/class" element={<ClassesPage />} />
+        <Route path="/class/*" element={<ClassesPage />} />
         <Route path="*" element={<h1>Error 404: Page not found</h1>}/>
       </Routes>
     </Router>
