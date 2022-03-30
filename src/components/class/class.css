@@ -146,3 +146,19 @@
   transform: scale(1.2);
   --icon-color: var(--highlight-color);
 }
+
+.classRedirect{
+  color: var(--accent-color);
+  padding: 2%;
+  margin: 6%; 
+  width: 40%;
+  border-radius: 0.5em;
+}
+
+.classRedirect:hover{
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.classRedirectTitle{
+  font-weight: bold;
+}

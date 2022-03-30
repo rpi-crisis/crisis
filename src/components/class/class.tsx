@@ -33,7 +33,7 @@ const Class: FC<{data: any}> = ({data}) => {
         <div className="detailed">
           <div className="exit" onClick={toggle_shown}/>
           <div id="class-header">
-            <Link to={"class/" + data.department + data.id_num}>{data.title}</Link>
+            <div>{data.title}</div>
             <div>{data.id}</div>
             <div>Credits: {data.credits}</div>
           </div>
@@ -42,18 +42,10 @@ const Class: FC<{data: any}> = ({data}) => {
             <div id="class-description">
               {data.description}
             </div>
-            <div className="body-title">Transfers</div>
-            <div id="transfers">
-              {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-              {data.transfer.length > 0 ? data.transfer.map((el: any, pos: number) => (
-                <div id="class-header" key={pos}>
-                  <div>{el.title}</div>
-                  <div>{el.id}</div>
-                  <div>{el.school}</div>
-                  <div>{el.location}</div>
-                </div>
-              )) : <div>No Transfers</div>}
-            </div>
+            <a href={"/class/" + data.department + data.id_num} className="classRedirect">
+              HEAD OVER TO THE NEW PAGE FOR 
+              <div className="classRedirectTitle"> [{data.title}] </div>
+            </a>
           </div>
         </div>
       </div>
