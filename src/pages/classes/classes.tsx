@@ -1,16 +1,19 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import "./classes.css";
+import "../../components/class/class.css";
 
 import NavBar from "../../components/navbar/navbar";
 import Pages from "../pageList";
 import Class from "../../components/class/class";
 import { CourseSearcher } from "../../scripts/fuzzy-search";
 import { useAppSelector } from "../../store";
+import { Transfer } from "../../types";
 
 const searcher = new CourseSearcher();
 
 const ClassesPage: FC = () => {
 
+  
   const pathname = window.location.pathname;
   const classCode = pathname.substring(7);
   const classDept = classCode.substring(0,4).toUpperCase();
@@ -38,6 +41,13 @@ const ClassesPage: FC = () => {
     );
   }
   else if(results[0].id == classDept + "-" + classNum){
+
+    const [display, update_display] = useState<boolean>(false);
+
+    const toggle_shown = () => {
+      update_display(!display);
+    };
+
     return (
       <div className="App">
         <header className="App-header">
@@ -52,11 +62,13 @@ const ClassesPage: FC = () => {
           <div id="class-body">
             <div className="body-title">Description</div>
             <div id="class-description">
-              {results[0].title}
+              NA
             </div>
-            <div className="body-title">Transfers</div>
-            <div id="transfers">
-              {results[0].transfer.length > 0 ? results[0].transfer.map((el: any, pos: number) => (
+            <div className="body-title transferlistTitle" onClick={toggle_shown}>
+              Transfers <i className="arrow"></i>
+            </div>
+            <div className="transferList" id="transfers" style={{display:display ? "block" : "none"}}>
+              {results[0].transfer.length > 0 ? results[0].transfer.map((el: Transfer, pos: number) => (
                 <div id="class-header" key={pos}>
                   <div>{el.title}</div>
                   <div>{el.id}</div>

@@ -20,3 +20,29 @@
   font-size: calc(10px + 2vmin);
   color: var(--header-color);
 }
+
+.transferlistTitle{
+  transition: 1s;
+}
+
+.transferlistTitle:hover{
+  transform: translate(-10%,0);
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.arrow {
+  border: solid var(--accent-color);
+  border-width: 0 0.2em 0.2em 0;
+  display: inline-block;
+  padding: 0.2em;
+  transition: 0.5s;
+  transform: rotate(-45deg);
+}
+
+.transferlistTitle.arrow:hover{
+  transform: rotate(45deg);
+}
+
+.transferList{
+  height: 35%;
+}
