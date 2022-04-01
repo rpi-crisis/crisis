@@ -3,7 +3,7 @@
 
 
 ## Co-Founder
-#### Colin Melville
+#### Cora Melville
 
 ## Developers
 - Lily Ritter (Spring 2022)
