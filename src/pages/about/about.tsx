@@ -77,7 +77,7 @@ const AboutPage: FC = () => {
               <h4>FOUNDERS</h4>
               <ul>
                 <li> <a href="https://github.com/TrevorBrunette" target="_blank" rel="noreferrer noopener">TREVOR BRUNETTE</a> </li>
-                <li> <a href="https://github.com/cxider" target="_blank" rel="noreferrer noopener">COLIN MELVILLE</a> </li>
+                <li> <a href="https://github.com/cxider" target="_blank" rel="noreferrer noopener">CORA MELVILLE</a> </li>
               </ul>
             </div>
 
