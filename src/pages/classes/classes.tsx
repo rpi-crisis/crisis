@@ -52,6 +52,7 @@ const ClassesPage: FC = () => {
       <div className="App">
         <header className="App-header">
           <NavBar pages={Pages("Classes")}/>
+          <Class course={results}/>
           <h3>
             {results[0].title}
             <span>&nbsp;&nbsp;&nbsp;</span>
