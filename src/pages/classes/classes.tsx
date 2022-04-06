@@ -8,6 +8,7 @@ import Class from "../../components/class/class";
 import { CourseSearcher } from "../../scripts/fuzzy-search";
 import { useAppSelector } from "../../store";
 import { Transfer } from "../../types";
+import ClassesInfo from "./classesComps/classesInfo";
 
 const searcher = new CourseSearcher();
 
@@ -42,43 +43,11 @@ const ClassesPage: FC = () => {
   }
   else if(results[0].id == classDept + "-" + classNum){
 
-    const [display, update_display] = useState<boolean>(false);
-
-    const toggle_shown = () => {
-      update_display(!display);
-    };
-
     return (
       <div className="App">
         <header className="App-header">
           <NavBar pages={Pages("Classes")}/>
-          <Class course={results}/>
-          <h3>
-            {results[0].title}
-            <span>&nbsp;&nbsp;&nbsp;</span>
-            <span>{classDept} {classNum}</span>
-            <span>&nbsp;&nbsp;&nbsp;</span>
-            <span>Credits: {results[0].credits}</span>
-          </h3>
-          <div id="class-body">
-            <div className="body-title">Description</div>
-            <div id="class-description">
-              NA
-            </div>
-            <div className="body-title transferlistTitle" onClick={toggle_shown}>
-              Transfers <i className="arrow"></i>
-            </div>
-            <div className="transferList" id="transfers" style={{display:display ? "block" : "none"}}>
-              {results[0].transfer.length > 0 ? results[0].transfer.map((el: Transfer, pos: number) => (
-                <div id="class-header" key={pos}>
-                  <div>{el.title}</div>
-                  <div>{el.id}</div>
-                  <div>{el.school}</div>
-                  <div>{el.location}</div>
-                </div>
-              )) : <div>No Transfers</div>}
-            </div>
-          </div>
+          <ClassesInfo course={results[0]}/>
         </header>
       </div>
     );
