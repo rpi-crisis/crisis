@@ -21,7 +21,7 @@ Stacks: HTML, CSS, TypeScript, Static React
 ### Contributors
 
 Lead: Trevor Brunette  
-Co-Lead: Colin Melville
+Co-Lead: Cora Melville
 
 For more information about contributions, see [AUTHORS](https://github.com/rpi-crisis/crisis/blob/main/AUTHORS.md)
 
