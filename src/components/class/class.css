@@ -80,8 +80,9 @@
 }
 
 .body-title {
+  left: 15vw;
   text-align: left;
-  width: 70%;
+  width: 70vw;
 }
 
 #class-description {

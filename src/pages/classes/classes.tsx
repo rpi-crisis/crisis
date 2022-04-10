@@ -47,7 +47,9 @@ const ClassesPage: FC = () => {
       <div className="App">
         <header className="App-header">
           <NavBar pages={Pages("Classes")}/>
-          <ClassesInfo course={results[0]}/>
+          <div style={{width: "100%"}}>
+            <ClassesInfo course={results[0]}/>
+          </div>
         </header>
       </div>
     );

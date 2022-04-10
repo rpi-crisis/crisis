@@ -22,11 +22,11 @@
 }
 
 .transferlistTitle{
+  width: 70vw;
   transition: 1s;
 }
 
 .transferlistTitle:hover{
-  transform: translate(-10%,0);
   background-color: rgba(0, 0, 0, .5);
 }
 
@@ -37,6 +37,7 @@
   padding: 0.2em;
   transition: 0.5s;
   transform: rotate(-45deg);
+  justify-content: end;
 }
 
 .transferlistTitle.arrow:hover{
@@ -44,5 +45,28 @@
 }
 
 .transferList{
+  width: 60vw;
+  height: 35vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 0.5em;
+  color: var(--text-color);
+  border: solid var(--highlight-color);
+  border-radius: 0.5em;
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.class-description {
+  width: 60vw;
   height: 35%;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  color: var(--text-color);
+  border: solid var(--highlight-color);
+  text-align: left;
+  text-indent: 2em;
+  font-size: 0.8em;
 }
