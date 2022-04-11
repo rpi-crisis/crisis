@@ -1,7 +1,6 @@
 import React, { FC, useState } from "react";
 import { Transfer } from "../../../types";
 import "../classes.css";
-import "../../../components/class/class.css";
 
 const ClassesTransfers: FC<{transfers: Transfer[]}> = ({transfers}) => {
 
@@ -21,7 +20,7 @@ const ClassesTransfers: FC<{transfers: Transfer[]}> = ({transfers}) => {
       </div>  
       <div className="transferList" style={{display:display ? "block" : "none"}}>
         {transfers.length > 0 ? transfers.map((el: Transfer, pos: number) => (
-          <div id="class-header" key={pos}>
+          <div className="class-header" key={pos}>
             <div>{el.title}</div>
             <div>{el.id}</div>
             <div>{el.school}</div>

@@ -21,9 +21,46 @@
   color: var(--header-color);
 }
 
+.whole-body{
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+  justify-content: space-around;
+}
+
+.left-body {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: left;
+  align-items: center;
+  height: 80%;
+  margin-top: 1em;
+  flex-grow: 3;
+}
+
+.right-body {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: right;
+  align-items: center;
+  height: 80%;
+  margin-top: 1em;
+  flex-grow: 1;
+}
+
+.body-title {
+  left: 15;
+  text-align: left;
+  width: 70%;
+}
+
+.description-title{
+  width: 60vw;
+}
+
 .transferlistTitle{
-  width: 70vw;
   transition: 1s;
+  width: 60vw;
 }
 
 .transferlistTitle:hover{
@@ -46,20 +83,54 @@
 
 .transferList{
   width: 60vw;
-  height: 35vh;
+  height: 35%;
+  max-height: 35vh;
   overflow: scroll;
   overflow-x: hidden;
   padding: 0.5em;
+  border-radius: 0.5em;
   color: var(--text-color);
   border: solid var(--highlight-color);
-  border-radius: 0.5em;
   text-align: left;
   font-size: 0.8rem;
+}
+
+.sectionsList{
+  width: 60vw;
+  height: 35%;
+  max-height: 35vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  color: var(--text-color);
+  border: solid var(--highlight-color);
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.class-header {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  margin-top: 0.5em;
+  font-size: 1.05em;
+ }
+
+ .class-header>* {
+  width: 20%;
+  margin: auto;
+}
+
+.class-header>*:first-child{
+  width: 40%
 }
 
 .class-description {
   width: 60vw;
   height: 35%;
+  max-height: 35vh;
   overflow: scroll;
   overflow-x: hidden;
   padding: 0.5em;
@@ -69,4 +140,22 @@
   text-align: left;
   text-indent: 2em;
   font-size: 0.8em;
+}
+
+.requirements{
+  display: block;
+  width: 20vw;
+  height: 35%;
+  overflow: hidden;
+  overflow-x: auto;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  color: var(--text-color);
+  border: solid var(--highlight-color);
+  text-align: left;
+  font-size: 0.8em;
+}
+
+.req-title{
+  
 }
