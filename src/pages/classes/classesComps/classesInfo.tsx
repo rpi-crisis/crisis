@@ -10,12 +10,10 @@ const ClassesInfo: FC<{course: any}> = ({course}) => {
 
   return (
     <div>
-      <h3>
-        {course.title}
-        <span>&nbsp;&nbsp;&nbsp;</span>
-        <span>{course.id}</span>
-        <span>&nbsp;&nbsp;&nbsp;</span>
-        <span>Credits: {course.credits}</span>
+      <h3 className="course-titles">
+        <span className="course-title-items">{course.title}</span>
+        <span className="course-title-items">{course.id}</span>
+        <span className="course-title-items">Credits: {course.credits}</span>
       </h3>
       <div className="whole-body">
         <span className="left-body">
@@ -25,10 +23,11 @@ const ClassesInfo: FC<{course: any}> = ({course}) => {
           <ClassesTransfers transfers={course.transfer}/>
         </span>
         <span className="right-body">
+          {/* <ClassesSections sections={course.sections}/> */}
           <div className="body-title">
             Related Classes
           </div>
-          <div className="requirements">
+          <div className="right-sidebox">
             <u className="req-title">
               Class prerequisites:
             </u>
@@ -48,7 +47,11 @@ const ClassesInfo: FC<{course: any}> = ({course}) => {
               {course.cross}
             </div>
           </div>
-          <div className="requirements">
+          <div className="body-title">
+            <br/>
+            Other details
+          </div>
+          <div className="right-sidebox">
             <div>
               Communication Intensive:
               <i>

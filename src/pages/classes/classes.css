@@ -28,6 +28,20 @@
   justify-content: space-around;
 }
 
+.course-titles{
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  margin-top: 0.5em;
+  font-size: 1.05em;
+  gap: 5%;
+}
+
+.course-title-items{
+  width: 20vw;
+}
+
 .left-body {
   display: flex;
   flex-flow: column wrap;
@@ -59,7 +73,6 @@
 }
 
 .transferlistTitle{
-  transition: 1s;
   width: 60vw;
 }
 
@@ -77,7 +90,7 @@
   justify-content: end;
 }
 
-.transferlistTitle.arrow:hover{
+.arrow:hover{
   transform: rotate(45deg);
 }
 
@@ -142,7 +155,7 @@
   font-size: 0.8em;
 }
 
-.requirements{
+.right-sidebox{
   display: block;
   width: 20vw;
   height: 35%;
