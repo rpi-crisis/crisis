@@ -1,10 +1,8 @@
-import React, { FC, useState } from "react";
-import { Course, Transfer, Section, Meeting } from "../../../types";
+import React, { FC } from "react";
 import ClassesTransfers from "./classesTransfers";
 import ClassesSections from "./classesSections";
 import "../classes.css";
 import "../../../components/class/class.css";
-import courses from "../../../store/slices/courses";
 
 const ClassesInfo: FC<{course: any}> = ({course}) => {
 
@@ -23,19 +21,18 @@ const ClassesInfo: FC<{course: any}> = ({course}) => {
           <ClassesTransfers transfers={course.transfer}/>
         </span>
         <span className="right-body">
-          {/* <ClassesSections sections={course.sections}/> */}
           <div className="body-title">
             Related Classes
           </div>
           <div className="right-sidebox">
             <u className="req-title">
-              Class prerequisites:
+              Prerequisites courses:
             </u>
             <div>
               {course.prereq}
             </div>
             <u className="req-title">
-              Class corequisite:
+              Corequisite courses:
             </u>
             <div >
               {course.coreq}
