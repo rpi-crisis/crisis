@@ -42,6 +42,8 @@ const Class: FC<{data: any}> = ({data}) => {
             <div id="class-description">
               {data.description}
             </div>
+            {/* feel free to get rid of this part and make it direct transfer from little class box to website
+                I did this for convenience and liked the smootheness lol */}
             <a href={"/class/" + data.department + data.id_num} className="classRedirect">
               HEAD OVER TO THE NEW PAGE FOR 
               <div className="classRedirectTitle"> [{data.title}] </div>

@@ -25,10 +25,7 @@ const ClassesPage: FC = () => {
   searcher.update(Object.values(courses));
   const results = searcher.search(classCode);
 
-  //let validID: true;
-  //if(classCode.length != 8){
-  //  validID: false;
-  //}
+  // fuzzy search not the fastest nor best however, it was only solution i could find :(
 
   if(classCode.length != 8){
     return (
