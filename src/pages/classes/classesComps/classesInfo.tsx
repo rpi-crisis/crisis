@@ -30,7 +30,9 @@ const ClassesInfo: FC<{course: any}> = ({course}) => {
               Prerequisites courses:
             </u>
             {/* issue: white screens when doing course.prereq.length
-                    or any other course.something */}
+                    or any other course.something 
+                also it seems like a lot of information is still 
+                  not here yet*/}
             <div> 
               {course.prereq}
             </div>
