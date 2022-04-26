@@ -29,7 +29,9 @@ const ClassesInfo: FC<{course: any}> = ({course}) => {
             <u className="req-title">
               Prerequisites courses:
             </u>
-            <div>
+            {/* issue: white screens when doing course.prereq.length
+                    or any other course.something */}
+            <div> 
               {course.prereq}
             </div>
             <u className="req-title">

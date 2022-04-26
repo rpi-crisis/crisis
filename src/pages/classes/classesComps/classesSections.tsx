@@ -11,6 +11,7 @@ const ClassesSections: FC<{sections: Section[]}> = ({sections}) => {
         </span>
       </div>  
       <div className="right-sidebox">
+        {/* issue: white screens when adding this, or even doing sections.length */}
         {/*sections.length > 0 ? sections.map((el: Section, pos: number) => (
           <div className="class-header" key={pos}>
             <div>{el.section}</div>
