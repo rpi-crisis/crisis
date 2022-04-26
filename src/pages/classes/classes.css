@@ -39,7 +39,8 @@
 }
 
 .course-title-items{
-  width: 20vw;
+  /* min-width: 20vw; */
+  max-width: 25vw;
 }
 
 .left-body {
@@ -108,8 +109,12 @@
   font-size: 0.8rem;
 }
 
+.sectionlistTitle{
+  width: 20vw;
+}
+
 .sectionsList{
-  width: 60vw;
+  width: 20vw;
   height: 35%;
   max-height: 35vh;
   overflow: scroll;
@@ -144,7 +149,7 @@
   width: 60vw;
   height: 35%;
   max-height: 35vh;
-  overflow: scroll;
+  overflow: auto;
   overflow-x: hidden;
   padding: 0.5em;
   border-radius: 0.5em;

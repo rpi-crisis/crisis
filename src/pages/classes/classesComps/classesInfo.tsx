@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import ClassesTransfers from "./classesTransfers";
 import ClassesSections from "./classesSections";
+import { Transfer } from "../../../types";
 import "../classes.css";
 import "../../../components/class/class.css";
 
@@ -17,10 +18,10 @@ const ClassesInfo: FC<{course: any}> = ({course}) => {
         <span className="left-body">
           <div className="body-title description-title  ">Description</div>
           <div className="class-description">{course.description}</div>
-          {/* <ClassesSections sections={course.sections}/> */}
           <ClassesTransfers transfers={course.transfer}/>
         </span>
         <span className="right-body">
+          <ClassesSections sections={course.sections}/>
           <div className="body-title">
             Related Classes
           </div>
