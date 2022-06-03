@@ -6,6 +6,8 @@
 
 - [Bash "Cheatsheet"](https://cheatography.com/davechild/cheat-sheets/linux-command-line/)
 
+- [Git Interactive Tutorial](https://learngitbranching.js.org/)
+
 - [Git CLI "Cheatsheet"](https://education.github.com/git-cheat-sheet-education.pdf)
   
 ## BS4 Web scraping:
