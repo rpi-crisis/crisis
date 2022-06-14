@@ -1,4 +1,5 @@
 import React, { FC, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./class.css";
 
 /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
@@ -41,18 +42,12 @@ const Class: FC<{data: any}> = ({data}) => {
             <div id="class-description">
               {data.description}
             </div>
-            <div className="body-title">Transfers</div>
-            <div id="transfers">
-              {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-              {data.transfer.length > 0 ? data.transfer.map((el: any, pos: number) => (
-                <div id="class-header" key={pos}>
-                  <div>{el.title}</div>
-                  <div>{el.id}</div>
-                  <div>{el.school}</div>
-                  <div>{el.location}</div>
-                </div>
-              )) : <div>No Transfers</div>}
-            </div>
+            {/* feel free to get rid of this part and make it direct transfer from little class box to website
+                I did this for convenience and liked the smootheness lol */}
+            <a href={"/class/" + data.department + data.id_num} className="classRedirect">
+              HEAD OVER TO THE NEW PAGE FOR 
+              <div className="classRedirectTitle"> [{data.title}] </div>
+            </a>
           </div>
         </div>
       </div>

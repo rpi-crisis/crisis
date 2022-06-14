@@ -20,3 +20,160 @@
   font-size: calc(10px + 2vmin);
   color: var(--header-color);
 }
+
+.whole-body{
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+  justify-content: space-around;
+}
+
+.course-titles{
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  margin-top: 0.5em;
+  font-size: 1.05em;
+  gap: 5%;
+}
+
+.course-title-items{
+  /* min-width: 20vw; */
+  max-width: 25vw;
+}
+
+.left-body {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: left;
+  align-items: center;
+  height: 80%;
+  margin-top: 1em;
+  flex-grow: 3;
+}
+
+.right-body {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: right;
+  align-items: center;
+  height: 80%;
+  margin-top: 1em;
+  flex-grow: 1;
+}
+
+.body-title {
+  left: 15;
+  text-align: left;
+  width: 70%;
+}
+
+.description-title{
+  width: 60vw;
+}
+
+.transferlistTitle{
+  width: 60vw;
+}
+
+.transferlistTitle:hover{
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.arrow {
+  border: solid var(--accent-color);
+  border-width: 0 0.2em 0.2em 0;
+  display: inline-block;
+  padding: 0.2em;
+  transition: 0.5s;
+  transform: rotate(-45deg);
+  justify-content: end;
+}
+
+.arrow:hover{
+  transform: rotate(45deg);
+}
+
+.transferList{
+  width: 60vw;
+  height: 35%;
+  max-height: 35vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  color: var(--text-color);
+  border: solid var(--highlight-color);
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.sectionlistTitle{
+  width: 20vw;
+}
+
+.sectionsList{
+  width: 20vw;
+  height: 35%;
+  max-height: 35vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  color: var(--text-color);
+  border: solid var(--highlight-color);
+  text-align: left;
+  font-size: 0.8rem;
+}
+
+.class-header {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  margin-top: 0.5em;
+  font-size: 1.05em;
+ }
+
+ .class-header>* {
+  width: 20%;
+  margin: auto;
+}
+
+.class-header>*:first-child{
+  width: 40%
+}
+
+.class-description {
+  width: 60vw;
+  height: 35%;
+  max-height: 35vh;
+  overflow: auto;
+  overflow-x: hidden;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  color: var(--text-color);
+  border: solid var(--highlight-color);
+  text-align: left;
+  text-indent: 2em;
+  font-size: 0.8em;
+}
+
+.right-sidebox{
+  display: block;
+  width: 20vw;
+  height: 35%;
+  overflow: hidden;
+  overflow-x: auto;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  color: var(--text-color);
+  border: solid var(--highlight-color);
+  text-align: left;
+  font-size: 0.8em;
+}
+
+.req-title{
+  
+}

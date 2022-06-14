@@ -1,55 +1,67 @@
-import React, { FC /*,  useState, useEffect */ } from "react";
+import React, { FC, useState } from "react";
 import "./classes.css";
-
-// import { CourseSearcher } from "../../scripts/fuzzy-search";
+import "../../components/class/class.css";
 
 import NavBar from "../../components/navbar/navbar";
-// import SearchBar from "../../components/search/search";
 import Pages from "../pageList";
-// import Class from "../../components/class/class";
-// import { Course } from "../../types";
+import Class from "../../components/class/class";
+import { CourseSearcher } from "../../scripts/fuzzy-search";
+import { useAppSelector } from "../../store";
+import { Transfer } from "../../types";
+import ClassesInfo from "./classesComps/classesInfo";
 
-// interface InputState {
-//   results: Course[];
-// }
-//
-// const searcher = new CourseSearcher();
+const searcher = new CourseSearcher();
 
 const ClassesPage: FC = () => {
 
-  // const [state, setState] = useState<InputState>({results:[]});
-  //
-  // const [searchbar_content, content_update] = useState<string>("");
-  //
-  // const searchQuery = (query: string): void => {
-  //   if(query === "") {
-  //     setState({results: []});
-  //     return;
-  //   }
-  //   const results = searcher.search(query).slice(0,7);
-  //   console.log(results);
-  //   setState({results: results});
-  // };
-  //
-  // const call_search = React.useCallback((value: string): void => {
-  //   searchQuery(value);
-  // }, []);
-  //
-  // useEffect(() => {
-  //   const timeOutId = setTimeout(() => call_search(searchbar_content),200);
-  //   return () => clearTimeout(timeOutId);
-  // },[searchbar_content,call_search]);
+  
+  const pathname = window.location.pathname;
+  const classCode = pathname.substring(7);
+  const classDept = classCode.substring(0,4).toUpperCase();
+  const classNum = classCode.substring(4);
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <NavBar pages={Pages("Classes")}/>
-        <h3>Enter the department you want</h3>
-        {/*<SearchBar content_update={content_update}/>*/}
-        {/*{state.results.map((el,pos) => {return <Class key={pos} data={el}/>;})}*/}
-      </header>
-    </div>
-  );
+  const { courses } = useAppSelector(state => state.courses);
+
+  searcher.update(Object.values(courses));
+  const results = searcher.search(classCode);
+
+  // fuzzy search not the fastest nor best however, it was only solution i could find :(
+
+  if(classCode.length != 8){
+    return (
+      <div className="App">
+        <header className="App-header">
+          <NavBar pages={Pages("Classes")}/>
+          <h3>ERROR 404: PAGE NOT FOUND</h3>
+          invalid class code
+        </header>
+      </div>
+    );
+  }
+  else if(results[0].id == classDept + "-" + classNum){
+
+    return (
+      <div className="App">
+        <header className="App-header">
+          <NavBar pages={Pages("Classes")}/>
+          <div style={{width: "100%"}}>
+            <ClassesInfo course={results[0]}/>
+          </div>
+        </header>
+      </div>
+    );
+  }
+  else{
+    return (
+      <div className="App">
+        <header className="App-header">
+          <NavBar pages={Pages("Classes")}/>
+          <h3>No class found</h3>
+          Did you mean any of these:
+          {results.splice(0,5).map((el,pos) => {return <Class key={pos} data={el}/>;})}
+        </header>
+      </div>
+    );
+  }
 };
-
 export default ClassesPage;
